@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="bibblomoneyLinq">
+  <DataContextMoniker Name="/bibblomoneyLinqDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d3bec8da-5ab4-4adf-ab9a-9329ba7aa99f" absoluteBounds="3.625, 2.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/bibblomoneyLinqDataContext/tblAJ_bibblimoneyEarnedLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="83297608-2b79-4977-8b4a-4ebf8291f63f" absoluteBounds="3.6399999999999997, 3.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0439bc2a-5d64-4649-9c02-d815bcd99332" absoluteBounds="0.875, 2.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/bibblomoneyLinqDataContext/tblAJ_bibblimoneyEarnFunction" />
+      <nestedChildShapes>
+        <elementListCompartment Id="80e92739-6bf9-4e97-9877-e456f5b3ff89" absoluteBounds="0.89000000000000012, 3.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="95492ae2-8a7d-475c-a3bf-debb2bf82118" absoluteBounds="0.875, 0.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/bibblomoneyLinqDataContext/tblAJ_bibblimoneyEarned" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cbbbbbf0-5eef-4645-9bfa-e3cfdef7cbbc" absoluteBounds="0.89000000000000012, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="337633a6-8543-4fd4-b13b-8acd44318710" absoluteBounds="3.625, 0.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/bibblomoneyLinqDataContext/tblAJ_Bank" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e07e9a10-2812-47ab-a466-b5a9097fecb7" absoluteBounds="3.6399999999999997, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

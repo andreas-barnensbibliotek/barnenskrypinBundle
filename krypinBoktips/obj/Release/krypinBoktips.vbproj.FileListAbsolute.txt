@@ -1,0 +1,9 @@
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoktips\bin\Release\krypinBoktips.dll.config
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoktips\bin\Release\krypinBoktips.dll
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoktips\bin\Release\krypinBoktips.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoktips\bin\Release\krypinBoktips.xml
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoktips\obj\Release\krypinBoktips.Resources.resources
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoktips\obj\Release\krypinBoktips.vbproj.GenerateResource.Cache
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoktips\obj\Release\krypinBoktips.dll
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoktips\obj\Release\krypinBoktips.xml
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoktips\obj\Release\krypinBoktips.pdb

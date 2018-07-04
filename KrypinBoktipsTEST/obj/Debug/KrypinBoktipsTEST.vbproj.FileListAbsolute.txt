@@ -1,0 +1,16 @@
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\bin\Debug\KrypinBoktipsTEST.dll
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\bin\Debug\KrypinBoktipsTEST.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\bin\Debug\KrypinBoktipsTEST.xml
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\bin\Debug\krypinBoktips.dll
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\bin\Debug\krypinBoktips.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\bin\Debug\krypinBoktips.xml
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\obj\Debug\KrypinBoktipsTEST.vbprojResolveAssemblyReference.cache
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\obj\Debug\KrypinBoktipsTEST.Resources.resources
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\obj\Debug\KrypinBoktipsTEST.vbproj.GenerateResource.Cache
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\obj\Debug\KrypinBoktipsTEST.dll
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\obj\Debug\KrypinBoktipsTEST.xml
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\obj\Debug\KrypinBoktipsTEST.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\bin\Debug\barnenskrypinIMGHandler.dll
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\bin\Debug\barnenskrypinIMGHandler.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\bin\Debug\barnenskrypinIMGHandler.xml

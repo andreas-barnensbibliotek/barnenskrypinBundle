@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LinqDataModel">
+  <DataContextMoniker Name="/LinqDataModelDataContext" />
+  <nestedChildShapes>
+    <classShape Id="46b9401b-70dc-43b0-a720-0df7e96754b1" absoluteBounds="1.375, 1.25, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/LinqDataModelDataContext/tblAJBookTip" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f44412d2-580e-428a-93d8-091f156378f6" absoluteBounds="1.3899999999999997, 1.71, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1dbf2984-f583-451f-b0a3-5a88a3775e19" absoluteBounds="4.125, 1.25, 2, 6.3861311848958326">
+      <DataClassMoniker Name="/LinqDataModelDataContext/tblAjKatalogBook" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d977bdfc-5536-4fa2-96b0-20ef15e51ec2" absoluteBounds="4.1400000000000006, 1.71, 1.9700000000000002, 5.826131184895833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="bokmarkelserLinq">
+  <DataContextMoniker Name="/bokmarkelserLinqDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d37c2442-0783-4319-985a-114500b9d3f2" absoluteBounds="3.875, 1, 2, 1.9631982421875">
+      <DataClassMoniker Name="/bokmarkelserLinqDataContext/tblAjBokmarkelseGrupper" />
+      <nestedChildShapes>
+        <elementListCompartment Id="401b0c91-bf09-4eec-80aa-36227a563324" absoluteBounds="3.89, 1.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0cf3f6a9-7423-459a-803d-024829959808" absoluteBounds="6.25, 0.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/bokmarkelserLinqDataContext/tblAjBokmarkelser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b9aba73e-cfd7-4d52-a011-7c0400c0a4b6" absoluteBounds="6.2650000000000006, 1.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0aabc3d1-cae0-4df3-a292-ce33fd4cfc4f" absoluteBounds="1.375, 1, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/bokmarkelserLinqDataContext/tblAjBokmarkelserPointCounter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d8356d92-ac50-44af-9032-63c25d5814bf" absoluteBounds="1.3900000000000001, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

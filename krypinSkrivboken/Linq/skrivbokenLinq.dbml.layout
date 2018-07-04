@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="skrivbokenLinq">
+  <DataContextMoniker Name="/skrivbokenLinqDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3bf98a4d-fc79-471a-8217-acc48a66ecec" absoluteBounds="0.75, 0.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/skrivbokenLinqDataContext/tblAJBarnensSkrivCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="60bee4ff-be3a-43a2-8749-a2d5bff37de1" absoluteBounds="0.76499999999999968, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f6ae7709-9e1f-4c80-8afc-0a71ac0b3942" absoluteBounds="3.25, 0.5, 2, 2.5401025390625">
+      <DataClassMoniker Name="/skrivbokenLinqDataContext/tblAJBarnensSkriv" />
+      <nestedChildShapes>
+        <elementListCompartment Id="24efa85c-faed-4518-b78b-d83e6c73400a" absoluteBounds="3.2649999999999997, 0.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,9 @@
+D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinIMGHandler\bin\Release\barnenskrypinIMGHandler.dll
+D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinIMGHandler\bin\Release\barnenskrypinIMGHandler.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinIMGHandler\bin\Release\barnenskrypinIMGHandler.xml
+D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinIMGHandler\obj\Release\barnenskrypinIMGHandler.Resources.resources
+D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinIMGHandler\obj\Release\barnenskrypinIMGHandler.vbproj.GenerateResource.Cache
+D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinIMGHandler\obj\Release\barnenskrypinIMGHandler.dll
+D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinIMGHandler\obj\Release\barnenskrypinIMGHandler.xml
+D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinIMGHandler\obj\Release\barnenskrypinIMGHandler.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinIMGHandler\obj\Release\barnenskrypinIMGHandler.vbprojResolveAssemblyReference.cache

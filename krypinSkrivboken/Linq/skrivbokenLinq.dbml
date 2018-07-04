@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AJDNNDatabase_v5" Class="skrivbokenLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=AJDNNDatabase_v5;Persist Security Info=True;User ID=forfAdmin2" SettingsObjectName="krypinSkrivboken.My.MySettings" SettingsPropertyName="AJDNNDatabase_v5ConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblAJBarnensSkrivCategory" Member="tblAJBarnensSkrivCategories">
+    <Type Name="tblAJBarnensSkrivCategory">
+      <Column Name="catid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="category" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="catimg" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="catcolor" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="catactive" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblAJBarnensSkriv" Member="tblAJBarnensSkrivs">
+    <Type Name="tblAJBarnensSkriv">
+      <Column Name="SkrivID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Userid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Inserted" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Story" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Category" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Approved" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Gillar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="publish" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.AJBarnensSkrivCRUD" Method="AJBarnensSkrivCRUD">
+    <Parameter Name="typ" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SkrivID" Parameter="skrivID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="userId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Inserted" Parameter="inserted" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="title" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="story" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="Category" Parameter="category" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Approved" Parameter="approved" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Gillar" Parameter="gillar" Type="System.Int32" DbType="Int" />
+    <Parameter Name="publish" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AJ_BB_Krypin_skrivbok_byUserid" Method="AJ_BB_Krypin_skrivbok_byUserid">
+    <Parameter Name="typ" Type="System.Int32" DbType="Int" />
+    <Parameter Name="userid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="approved" Type="System.Int32" DbType="Int" />
+    <Parameter Name="publish" Type="System.Int32" DbType="Int" />
+    <ElementType Name="AJ_BB_Krypin_skrivbok_byUseridResult">
+      <Column Name="SkrivID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Userid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Inserted" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Story" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Category" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Approved" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Gillar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="publish" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AJ_BB_Krypin_skrivbok_byCategory" Method="AJ_BB_Krypin_skrivbok_byCategory">
+    <Parameter Name="Category" Parameter="category" Type="System.Int32" DbType="Int" />
+    <Parameter Name="approved" Type="System.Int32" DbType="Int" />
+    <Parameter Name="publish" Type="System.Int32" DbType="Int" />
+    <ElementType Name="AJ_BB_Krypin_skrivbok_byCategoryResult">
+      <Column Name="SkrivID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Userid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Inserted" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Story" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Category" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Approved" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Gillar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="publish" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AJ_BB_Krypin_skrivbok_bySkrivID" Method="AJ_BB_Krypin_skrivbok_bySkrivID">
+    <Parameter Name="skrivID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="AJ_BB_Krypin_skrivbok_bySkrivIDResult">
+      <Column Name="SkrivID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Userid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Inserted" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Story" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Category" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Approved" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Gillar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="publish" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

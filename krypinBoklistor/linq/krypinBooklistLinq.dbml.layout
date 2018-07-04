@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="krypinBooklistLinq">
+  <DataContextMoniker Name="/krypinBooklistLinqDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c21e2bce-b240-456b-a180-bb691cbc3e12" absoluteBounds="2.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/krypinBooklistLinqDataContext/tblAJBookListItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0749816-d283-4a8b-a60c-b5f0d1d71623" absoluteBounds="2.7649999999999997, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0f3e48bc-7ec6-4716-bf6a-e19eedeb3802" absoluteBounds="5, 3.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/krypinBooklistLinqDataContext/tblAjKatalogMyBook" />
+      <nestedChildShapes>
+        <elementListCompartment Id="24522b13-73cc-4d91-b4e1-9aeb2716fadc" absoluteBounds="5.0150000000000006, 3.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b6a3e16-0f37-4745-b83f-2fda5e096135" absoluteBounds="5, 0.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/krypinBooklistLinqDataContext/tblAJBookList" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f5f3c30-94d6-401b-aeef-34354a616399" absoluteBounds="5.015, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

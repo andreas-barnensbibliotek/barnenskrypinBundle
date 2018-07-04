@@ -1,0 +1,16 @@
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Debug\KrypinBokmarkelserTEST.dll
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Debug\KrypinBokmarkelserTEST.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Debug\KrypinBokmarkelserTEST.xml
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\obj\Debug\KrypinBokmarkelserTEST.vbprojResolveAssemblyReference.cache
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\obj\Debug\KrypinBokmarkelserTEST.Resources.resources
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\obj\Debug\KrypinBokmarkelserTEST.vbproj.GenerateResource.Cache
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\obj\Debug\KrypinBokmarkelserTEST.dll
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\obj\Debug\KrypinBokmarkelserTEST.xml
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\obj\Debug\KrypinBokmarkelserTEST.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Debug\KrypinBokmarkelser.dll
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Debug\KrypinBokmarkelser.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Debug\KrypinBokmarkelser.xml
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Debug\BibbloMoney.dll
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Debug\BibbloMoney.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Debug\BibbloMoney.xml

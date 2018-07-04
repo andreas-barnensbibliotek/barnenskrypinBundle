@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database" Class="LinqDataModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="barnensBoktipsLibrary.My.MySettings" SettingsPropertyName="DatabaseConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblAJBookTip" Member="tblAJBookTips">
+    <Type Name="tblAJBookTip">
+      <Column Name="TipID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Bookid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HighAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LowAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Review" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Approved" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Inserted" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tiptype" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblAjKatalogBooks" Member="tblAjKatalogBooks">
+    <Type Name="tblAjKatalogBook">
+      <Column Name="bookID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ModuleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Version" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="isbn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PublisherID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Inserted" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Changed" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Subtitle" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Serie" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Serienr" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Pages" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Price" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Language" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Information" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Synopsis" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Published" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="presentation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="presentationlink" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ebooklink" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="newcopy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="inserter" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Lektor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotVotes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Bokjuryn" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Easyread" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.AJBoktipsCRUD" Method="AJBoktipsCRUD">
+    <Parameter Name="typ" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TipID" Parameter="tipID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="title" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Bookid" Parameter="bookid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Author" Parameter="author" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="HighAge" Parameter="highAge" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LowAge" Parameter="lowAge" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Review" Parameter="review" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Userage" Parameter="userage" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tiptype" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Userids" Parameter="userids" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Approved" Parameter="approved" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Category" Parameter="category" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Inserted" Parameter="inserted" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AJBoktipsGet" Method="AJBoktipsGet">
+    <Parameter Name="typ" Type="System.Int32" DbType="Int" />
+    <Parameter Name="userId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="bookId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="AJBoktipsGetResult">
+      <Column Name="TipID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Bookid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HighAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LowAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Review" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Userage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tiptype" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Approved" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Inserted" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AjBoktipsTitleToBookid" Method="AjBoktipsTitleToBookid">
+    <Parameter Name="title" Type="System.String" DbType="VarChar(200)" />
+    <ElementType Name="AjBoktipsTitleToBookidResult">
+      <Column Name="bookID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ajKat_BoktipsByAuthor" Method="ajKat_BoktipsByAuthor">
+    <Parameter Name="typ" Type="System.Int32" DbType="Int" />
+    <Parameter Name="forfattare" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="forfID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ajKat_BoktipsByAuthorResult">
+      <Column Name="TipID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Bookid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HighAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LowAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Review" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Approved" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Inserted" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tiptype" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ajKat_BoktipsByCategory" Method="ajKat_BoktipsByCategory">
+    <Parameter Name="typ" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CatName" Parameter="catName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="CatID" Parameter="catID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ajKat_BoktipsByCategoryResult">
+      <Column Name="TipID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Bookid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="HighAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LowAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Review" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Approved" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Inserted" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tiptype" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ajKat_BoktipsByDate" Method="ajKat_BoktipsByDate">
+    <Parameter Name="antal" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ajKat_BoktipsByDateResult">
+      <Column Name="TipID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Bookid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="HighAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LowAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Review" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Approved" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Inserted" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tiptype" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ajKat_BoktipsByTitle" Method="ajKat_BoktipsByTitle">
+    <Parameter Name="typ" Type="System.Int32" DbType="Int" />
+    <Parameter Name="title" Type="System.String" DbType="VarChar(250)" />
+    <ElementType Name="ajKat_BoktipsByTitleResult">
+      <Column Name="TipID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Bookid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="HighAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LowAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Review" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Approved" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Inserted" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tiptype" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ajkat_BoktipsByRating" Method="ajkat_BoktipsByRating">
+    <Parameter Name="antal" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ajkat_BoktipsByRatingResult">
+      <Column Name="TipID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Bookid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="HighAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LowAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Review" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Approved" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Inserted" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tiptype" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ajkat_BoktipsBookidToISBN" Method="ajkat_BoktipsBookidToISBN">
+    <Parameter Name="bookid" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ajkat_BoktipsBookidToISBNResult">
+      <Column Name="isbn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ajKat_BoktipsByAgeIntervall" Method="ajKat_BoktipsByAgeIntervall">
+    <Parameter Name="tal" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ajKat_BoktipsByAgeIntervallResult">
+      <Column Name="TipID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Bookid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="LowAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HighAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Review" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Approved" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Inserted" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tiptype" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AJBoktipsTitleList" Method="AJBoktipsTitleList">
+    <ElementType Name="AJBoktipsTitleListResult">
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

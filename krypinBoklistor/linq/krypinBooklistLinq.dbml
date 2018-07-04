@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database" Class="krypinBooklistLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="krypinBoklistor.My.MySettings" SettingsPropertyName="DatabaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblAJBookListItem" Member="tblAJBookListItems">
+    <Type Name="tblAJBookListItem">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="blid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="bookid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblAjKatalogMyBooks" Member="tblAjKatalogMyBooks">
+    <Type Name="tblAjKatalogMyBook">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Bookid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblAJBookLists" Member="tblAJBookLists">
+    <Type Name="tblAJBookList">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="boklistnamn" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Userid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Dela" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Datum" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="gruppid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.AjBooklistExtended" Method="AjBooklistExtended">
+    <Parameter Name="val" Type="System.Int32" DbType="Int" />
+    <Parameter Name="valdboklistId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="AjBooklistExtendedResult">
+      <Column Name="bookid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="blid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="isbn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="namn" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AJKrypinGroupUserBooklist" Method="AJKrypinGroupUserBooklist">
+    <Parameter Name="userid" Type="System.Int32" DbType="Int" />
+    <ElementType Name="AJKrypinGroupUserBooklistResult">
+      <Column Name="boklistnamn" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="gruppid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="userid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AjBooklist" Method="AjBooklist">
+    <Parameter Name="val" Type="System.Int32" DbType="Int" />
+    <Parameter Name="visaUserid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="valdboklistId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="boklistnamn" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="AjBooklistResult">
+      <Column Name="boklistnamn" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Userid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gruppid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

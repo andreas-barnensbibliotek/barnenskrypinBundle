@@ -1,0 +1,10 @@
+D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\krypinSkrivboken.dll.config
+D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\krypinSkrivboken.dll
+D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\krypinSkrivboken.pdb
+D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\krypinSkrivboken.xml
+D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\obj\Debug\krypinSkrivboken.Resources.resources
+D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\obj\Debug\krypinSkrivboken.vbproj.GenerateResource.Cache
+D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\obj\Debug\krypinSkrivboken.dll
+D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\obj\Debug\krypinSkrivboken.xml
+D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\obj\Debug\krypinSkrivboken.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\obj\Debug\krypinSkrivboken.vbprojResolveAssemblyReference.cache

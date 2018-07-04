@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AJDNNDatabase_v5" Class="bibblomoneyLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=asusi7-andreas\sqlexpress;Initial Catalog=AJDNNDatabase_v5;User ID=forfAdmin2" SettingsObjectName="BibbloMoney.My.MySettings" SettingsPropertyName="AJDNNDatabase_v5ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblAJ_bibblimoneyEarnedLog" Member="tblAJ_bibblimoneyEarnedLogs">
+    <Type Name="tblAJ_bibblimoneyEarnedLog">
+      <Column Name="BMLogID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EarnfuncID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="beskrivning" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="loggdate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="timestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblAJ_bibblimoneyEarnFunction" Member="tblAJ_bibblimoneyEarnFunctions">
+    <Type Name="tblAJ_bibblimoneyEarnFunction">
+      <Column Name="EarnfuncID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EarnFunctionName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Beskrivning" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="bonusX" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bibblomoneyEarnID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblAJ_bibblimoneyEarned" Member="tblAJ_bibblimoneyEarneds">
+    <Type Name="tblAJ_bibblimoneyEarned">
+      <Column Name="BibblimoneyEarnID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="bibmoney" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="beskrivning" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="bonusX" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblAJ_Bank" Member="tblAJ_Banks">
+    <Type Name="tblAJ_Bank">
+      <Column Name="bankID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="bankUserid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Bibmoney" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BonusX" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Beskrivning" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.AJBibbloMoneyGetEarnFunction" Method="AJBibbloMoneyGetEarnFunction">
+    <Parameter Name="earnfuncid" Type="System.Int32" DbType="Int" />
+    <ElementType Name="AJBibbloMoneyGetEarnFunctionResult">
+      <Column Name="bibmoney" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bonusX" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EarnFunctionName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EarnfuncID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

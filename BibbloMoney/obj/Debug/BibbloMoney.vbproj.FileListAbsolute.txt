@@ -1,0 +1,10 @@
+D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\BibbloMoney.dll.config
+D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\BibbloMoney.dll
+D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\BibbloMoney.pdb
+D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\BibbloMoney.xml
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\obj\Debug\BibbloMoney.vbprojResolveAssemblyReference.cache
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\obj\Debug\BibbloMoney.Resources.resources
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\obj\Debug\BibbloMoney.vbproj.GenerateResource.Cache
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\obj\Debug\BibbloMoney.dll
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\obj\Debug\BibbloMoney.xml
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\obj\Debug\BibbloMoney.pdb

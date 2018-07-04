@@ -1,0 +1,13 @@
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\bin\Debug\BibbloMoneyTEST.dll
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\bin\Debug\BibbloMoneyTEST.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\bin\Debug\BibbloMoneyTEST.xml
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\obj\Debug\BibbloMoneyTEST.vbprojResolveAssemblyReference.cache
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\obj\Debug\BibbloMoneyTEST.Resources.resources
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\obj\Debug\BibbloMoneyTEST.vbproj.GenerateResource.Cache
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\obj\Debug\BibbloMoneyTEST.dll
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\obj\Debug\BibbloMoneyTEST.xml
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\obj\Debug\BibbloMoneyTEST.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\bin\Debug\BibbloMoney.dll
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\bin\Debug\BibbloMoney.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\bin\Debug\BibbloMoney.xml

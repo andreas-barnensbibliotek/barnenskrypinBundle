@@ -1,10 +1,12 @@
 ﻿Public Class BookTipsByTipIdController
     Private _dalobj As New CRUDBoktipsDAL
-
-    Public Function getbooktip(tipid As Integer) As boktipsInfo
+    Private _combiner As New boktipsImgSrcCombiner
+    Public Function getbooktipByTipid(tipid As Integer) As boktipsInfo
         Dim retobj As New boktipsInfo
-        Return _dalobj.GetBoktips(tipid)
+        retobj = _dalobj.GetBoktips(tipid)
+        Return _combiner.BoktipsImgSrcCombinerSingel(retobj)
 
     End Function
+
 
 End Class

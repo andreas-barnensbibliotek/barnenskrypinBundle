@@ -14,5 +14,17 @@
         <elementListCompartment Id="24efa85c-faed-4518-b78b-d83e6c73400a" absoluteBounds="3.2649999999999997, 0.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="60f326aa-4d5d-4e0f-8317-5026afec5af5" absoluteBounds="6.375, 0.625, 2, 3.1170068359375">
+      <DataClassMoniker Name="/skrivbokenLinqDataContext/UserRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="212cc5cf-8973-4d54-afcb-ffa6579df87d" absoluteBounds="6.39, 1.085, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7c05e471-0ffc-42fc-88f4-a9e6cf706cb8" absoluteBounds="6.5, 4.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/skrivbokenLinqDataContext/UsersOnline" />
+      <nestedChildShapes>
+        <elementListCompartment Id="64c604f2-325d-4445-a58b-82d235a62e0b" absoluteBounds="6.515, 4.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

@@ -22,168 +22,168 @@ Imports System.Linq.Expressions
 Imports System.Reflection
 
 
-<Global.System.Data.Linq.Mapping.DatabaseAttribute(Name:="Database")>  _
+<Global.System.Data.Linq.Mapping.DatabaseAttribute(Name:="AJDNNDatabase_v5")>
 Partial Public Class LinqDataModelDataContext
-	Inherits System.Data.Linq.DataContext
-	
-	Private Shared mappingSource As System.Data.Linq.Mapping.MappingSource = New AttributeMappingSource()
-	
-  #Region "Extensibility Method Definitions"
-  Partial Private Sub OnCreated()
-  End Sub
-  Partial Private Sub InserttblAJBookTip(instance As tblAJBookTip)
+    Inherits System.Data.Linq.DataContext
+
+    Private Shared mappingSource As System.Data.Linq.Mapping.MappingSource = New AttributeMappingSource()
+
+#Region "Extensibility Method Definitions"
+    Partial Private Sub OnCreated()
     End Sub
-  Partial Private Sub UpdatetblAJBookTip(instance As tblAJBookTip)
+    Partial Private Sub InserttblAJBookTip(instance As tblAJBookTip)
     End Sub
-  Partial Private Sub DeletetblAJBookTip(instance As tblAJBookTip)
+    Partial Private Sub UpdatetblAJBookTip(instance As tblAJBookTip)
     End Sub
-  Partial Private Sub InserttblAjKatalogBook(instance As tblAjKatalogBook)
+    Partial Private Sub DeletetblAJBookTip(instance As tblAJBookTip)
     End Sub
-  Partial Private Sub UpdatetblAjKatalogBook(instance As tblAjKatalogBook)
+    Partial Private Sub InserttblAjKatalogBook(instance As tblAjKatalogBook)
     End Sub
-  Partial Private Sub DeletetblAjKatalogBook(instance As tblAjKatalogBook)
+    Partial Private Sub UpdatetblAjKatalogBook(instance As tblAjKatalogBook)
     End Sub
-  #End Region
-	
-	Public Sub New()
-		MyBase.New(Global.krypinBoktips.My.MySettings.Default.DatabaseConnectionString1, mappingSource)
-		OnCreated
-	End Sub
-	
-	Public Sub New(ByVal connection As String)
-		MyBase.New(connection, mappingSource)
-		OnCreated
-	End Sub
-	
-	Public Sub New(ByVal connection As System.Data.IDbConnection)
-		MyBase.New(connection, mappingSource)
-		OnCreated
-	End Sub
-	
-	Public Sub New(ByVal connection As String, ByVal mappingSource As System.Data.Linq.Mapping.MappingSource)
-		MyBase.New(connection, mappingSource)
-		OnCreated
-	End Sub
-	
-	Public Sub New(ByVal connection As System.Data.IDbConnection, ByVal mappingSource As System.Data.Linq.Mapping.MappingSource)
-		MyBase.New(connection, mappingSource)
-		OnCreated
-	End Sub
-	
-	Public ReadOnly Property tblAJBookTips() As System.Data.Linq.Table(Of tblAJBookTip)
-		Get
-			Return Me.GetTable(Of tblAJBookTip)
-		End Get
-	End Property
-	
-	Public ReadOnly Property tblAjKatalogBooks() As System.Data.Linq.Table(Of tblAjKatalogBook)
-		Get
-			Return Me.GetTable(Of tblAjKatalogBook)
-		End Get
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.AJBoktipsCRUD")>  _
-	Public Function AJBoktipsCRUD(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal typ As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="TipID", DbType:="Int")> ByVal tipID As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="NVarChar(50)")> ByVal title As String, <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="Bookid", DbType:="Int")> ByVal bookid As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="Author", DbType:="NVarChar(50)")> ByVal author As String, <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="HighAge", DbType:="Int")> ByVal highAge As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="LowAge", DbType:="Int")> ByVal lowAge As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="Review", DbType:="NVarChar(50)")> ByVal review As String, <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="UserName", DbType:="NVarChar(50)")> ByVal userName As String, <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="Userage", DbType:="Int")> ByVal userage As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal tiptype As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="Userids", DbType:="Int")> ByVal userids As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="Approved", DbType:="Int")> ByVal approved As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="Category", DbType:="Int")> ByVal category As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="Inserted", DbType:="Date")> ByVal inserted As System.Nullable(Of Date)) As Integer
-		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), typ, tipID, title, bookid, author, highAge, lowAge, review, userName, userage, tiptype, userids, approved, category, inserted)
-		Return CType(result.ReturnValue,Integer)
-	End Function
-	
-	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.AJBoktipsGet")>  _
-	Public Function AJBoktipsGet(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal typ As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal userId As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal bookId As System.Nullable(Of Integer)) As ISingleResult(Of AJBoktipsGetResult)
-		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), typ, userId, bookId)
-		Return CType(result.ReturnValue,ISingleResult(Of AJBoktipsGetResult))
-	End Function
-	
-	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.AjBoktipsTitleToBookid")>  _
-	Public Function AjBoktipsTitleToBookid(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="VarChar(200)")> ByVal title As String) As ISingleResult(Of AjBoktipsTitleToBookidResult)
-		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), title)
-		Return CType(result.ReturnValue,ISingleResult(Of AjBoktipsTitleToBookidResult))
-	End Function
-	
-	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.ajKat_BoktipsByAuthor")>  _
-	Public Function ajKat_BoktipsByAuthor(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal typ As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="VarChar(250)")> ByVal forfattare As String, <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal forfID As System.Nullable(Of Integer)) As ISingleResult(Of ajKat_BoktipsByAuthorResult)
-		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), typ, forfattare, forfID)
-		Return CType(result.ReturnValue,ISingleResult(Of ajKat_BoktipsByAuthorResult))
-	End Function
-	
-	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.ajKat_BoktipsByCategory")>  _
-	Public Function ajKat_BoktipsByCategory(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal typ As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="CatName", DbType:="NVarChar(100)")> ByVal catName As String, <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="CatID", DbType:="Int")> ByVal catID As System.Nullable(Of Integer)) As ISingleResult(Of ajKat_BoktipsByCategoryResult)
-		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), typ, catName, catID)
-		Return CType(result.ReturnValue,ISingleResult(Of ajKat_BoktipsByCategoryResult))
-	End Function
-	
-	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.ajKat_BoktipsByDate")>  _
-	Public Function ajKat_BoktipsByDate(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal antal As System.Nullable(Of Integer)) As ISingleResult(Of ajKat_BoktipsByDateResult)
-		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), antal)
-		Return CType(result.ReturnValue,ISingleResult(Of ajKat_BoktipsByDateResult))
-	End Function
-	
-	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.ajKat_BoktipsByTitle")>  _
-	Public Function ajKat_BoktipsByTitle(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal typ As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="VarChar(250)")> ByVal title As String) As ISingleResult(Of ajKat_BoktipsByTitleResult)
-		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), typ, title)
-		Return CType(result.ReturnValue,ISingleResult(Of ajKat_BoktipsByTitleResult))
-	End Function
-	
-	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.ajkat_BoktipsByRating")>  _
-	Public Function ajkat_BoktipsByRating(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal antal As System.Nullable(Of Integer)) As ISingleResult(Of ajkat_BoktipsByRatingResult)
-		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), antal)
-		Return CType(result.ReturnValue,ISingleResult(Of ajkat_BoktipsByRatingResult))
-	End Function
-	
-	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.ajkat_BoktipsBookidToISBN")>  _
-	Public Function ajkat_BoktipsBookidToISBN(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal bookid As System.Nullable(Of Integer)) As ISingleResult(Of ajkat_BoktipsBookidToISBNResult)
-		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), bookid)
-		Return CType(result.ReturnValue,ISingleResult(Of ajkat_BoktipsBookidToISBNResult))
-	End Function
-	
-	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.ajKat_BoktipsByAgeIntervall")>  _
-	Public Function ajKat_BoktipsByAgeIntervall(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal tal As System.Nullable(Of Integer)) As ISingleResult(Of ajKat_BoktipsByAgeIntervallResult)
-		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), tal)
-		Return CType(result.ReturnValue,ISingleResult(Of ajKat_BoktipsByAgeIntervallResult))
-	End Function
-	
-	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.AJBoktipsTitleList")>  _
-	Public Function AJBoktipsTitleList() As ISingleResult(Of AJBoktipsTitleListResult)
-		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo))
-		Return CType(result.ReturnValue,ISingleResult(Of AJBoktipsTitleListResult))
-	End Function
+    Partial Private Sub DeletetblAjKatalogBook(instance As tblAjKatalogBook)
+    End Sub
+#End Region
+
+    Public Sub New()
+        MyBase.New(Global.krypinBoktips.My.MySettings.Default.AJDNNDatabase_v5ConnectionString, mappingSource)
+        OnCreated()
+    End Sub
+
+    Public Sub New(ByVal connection As String)
+        MyBase.New(connection, mappingSource)
+        OnCreated()
+    End Sub
+
+    Public Sub New(ByVal connection As System.Data.IDbConnection)
+        MyBase.New(connection, mappingSource)
+        OnCreated()
+    End Sub
+
+    Public Sub New(ByVal connection As String, ByVal mappingSource As System.Data.Linq.Mapping.MappingSource)
+        MyBase.New(connection, mappingSource)
+        OnCreated()
+    End Sub
+
+    Public Sub New(ByVal connection As System.Data.IDbConnection, ByVal mappingSource As System.Data.Linq.Mapping.MappingSource)
+        MyBase.New(connection, mappingSource)
+        OnCreated()
+    End Sub
+
+    Public ReadOnly Property tblAJBookTips() As System.Data.Linq.Table(Of tblAJBookTip)
+        Get
+            Return Me.GetTable(Of tblAJBookTip)
+        End Get
+    End Property
+
+    Public ReadOnly Property tblAjKatalogBooks() As System.Data.Linq.Table(Of tblAjKatalogBook)
+        Get
+            Return Me.GetTable(Of tblAjKatalogBook)
+        End Get
+    End Property
+
+    <Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.AJBoktipsCRUD")>
+    Public Function AJBoktipsCRUD(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal typ As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="TipID", DbType:="Int")> ByVal tipID As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="NVarChar(50)")> ByVal title As String, <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="Bookid", DbType:="Int")> ByVal bookid As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="Author", DbType:="NVarChar(50)")> ByVal author As String, <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="HighAge", DbType:="Int")> ByVal highAge As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="LowAge", DbType:="Int")> ByVal lowAge As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="Review", DbType:="NVarChar(50)")> ByVal review As String, <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="UserName", DbType:="NVarChar(50)")> ByVal userName As String, <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="Userage", DbType:="Int")> ByVal userage As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal tiptype As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="Userids", DbType:="Int")> ByVal userids As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="Approved", DbType:="Int")> ByVal approved As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="Category", DbType:="Int")> ByVal category As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="Inserted", DbType:="Date")> ByVal inserted As System.Nullable(Of Date)) As Integer
+        Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod, MethodInfo), typ, tipID, title, bookid, author, highAge, lowAge, review, userName, userage, tiptype, userids, approved, category, inserted)
+        Return CType(result.ReturnValue, Integer)
+    End Function
+
+    <Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.AJBoktipsGet")>
+    Public Function AJBoktipsGet(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal typ As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal userId As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal bookId As System.Nullable(Of Integer)) As ISingleResult(Of AJBoktipsGetResult)
+        Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod, MethodInfo), typ, userId, bookId)
+        Return CType(result.ReturnValue, ISingleResult(Of AJBoktipsGetResult))
+    End Function
+
+    <Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.AjBoktipsTitleToBookid")>
+    Public Function AjBoktipsTitleToBookid(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="VarChar(200)")> ByVal title As String) As ISingleResult(Of AjBoktipsTitleToBookidResult)
+        Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod, MethodInfo), title)
+        Return CType(result.ReturnValue, ISingleResult(Of AjBoktipsTitleToBookidResult))
+    End Function
+
+    <Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.ajKat_BoktipsByAuthor")>
+    Public Function ajKat_BoktipsByAuthor(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal typ As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="VarChar(250)")> ByVal forfattare As String, <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal forfID As System.Nullable(Of Integer)) As ISingleResult(Of ajKat_BoktipsByAuthorResult)
+        Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod, MethodInfo), typ, forfattare, forfID)
+        Return CType(result.ReturnValue, ISingleResult(Of ajKat_BoktipsByAuthorResult))
+    End Function
+
+    <Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.ajKat_BoktipsByCategory")>
+    Public Function ajKat_BoktipsByCategory(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal typ As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="CatName", DbType:="NVarChar(100)")> ByVal catName As String, <Global.System.Data.Linq.Mapping.ParameterAttribute(Name:="CatID", DbType:="Int")> ByVal catID As System.Nullable(Of Integer)) As ISingleResult(Of ajKat_BoktipsByCategoryResult)
+        Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod, MethodInfo), typ, catName, catID)
+        Return CType(result.ReturnValue, ISingleResult(Of ajKat_BoktipsByCategoryResult))
+    End Function
+
+    <Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.ajKat_BoktipsByDate")>
+    Public Function ajKat_BoktipsByDate(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal antal As System.Nullable(Of Integer)) As ISingleResult(Of ajKat_BoktipsByDateResult)
+        Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod, MethodInfo), antal)
+        Return CType(result.ReturnValue, ISingleResult(Of ajKat_BoktipsByDateResult))
+    End Function
+
+    <Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.ajKat_BoktipsByTitle")>
+    Public Function ajKat_BoktipsByTitle(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal typ As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="VarChar(250)")> ByVal title As String) As ISingleResult(Of ajKat_BoktipsByTitleResult)
+        Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod, MethodInfo), typ, title)
+        Return CType(result.ReturnValue, ISingleResult(Of ajKat_BoktipsByTitleResult))
+    End Function
+
+    <Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.ajkat_BoktipsByRating")>
+    Public Function ajkat_BoktipsByRating(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal antal As System.Nullable(Of Integer)) As ISingleResult(Of ajkat_BoktipsByRatingResult)
+        Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod, MethodInfo), antal)
+        Return CType(result.ReturnValue, ISingleResult(Of ajkat_BoktipsByRatingResult))
+    End Function
+
+    <Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.ajkat_BoktipsBookidToISBN")>
+    Public Function ajkat_BoktipsBookidToISBN(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal bookid As System.Nullable(Of Integer)) As ISingleResult(Of ajkat_BoktipsBookidToISBNResult)
+        Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod, MethodInfo), bookid)
+        Return CType(result.ReturnValue, ISingleResult(Of ajkat_BoktipsBookidToISBNResult))
+    End Function
+
+    <Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.ajKat_BoktipsByAgeIntervall")>
+    Public Function ajKat_BoktipsByAgeIntervall(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal tal As System.Nullable(Of Integer)) As ISingleResult(Of ajKat_BoktipsByAgeIntervallResult)
+        Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod, MethodInfo), tal)
+        Return CType(result.ReturnValue, ISingleResult(Of ajKat_BoktipsByAgeIntervallResult))
+    End Function
+
+    <Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.AJBoktipsTitleList")>
+    Public Function AJBoktipsTitleList() As ISingleResult(Of AJBoktipsTitleListResult)
+        Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod, MethodInfo))
+        Return CType(result.ReturnValue, ISingleResult(Of AJBoktipsTitleListResult))
+    End Function
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tblAJBookTip")>  _
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tblAJBookTip")>
 Partial Public Class tblAJBookTip
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _TipID As Integer
-	
-	Private _Title As String
-	
-	Private _Bookid As System.Nullable(Of Integer)
-	
-	Private _Author As String
-	
-	Private _HighAge As System.Nullable(Of Integer)
-	
-	Private _LowAge As System.Nullable(Of Integer)
-	
-	Private _Review As String
-	
-	Private _UserName As String
-	
-	Private _Userid As System.Nullable(Of Integer)
-	
-	Private _Approved As System.Nullable(Of Integer)
-	
-	Private _Category As String
-	
-	Private _Inserted As System.Nullable(Of Date)
-	
-	Private _tiptype As System.Nullable(Of Integer)
-	
-	Private _userage As System.Nullable(Of Integer)
-	
-    #Region "Extensibility Method Definitions"
+    Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+
+    Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+
+    Private _TipID As Integer
+
+    Private _Title As String
+
+    Private _Bookid As System.Nullable(Of Integer)
+
+    Private _Author As String
+
+    Private _HighAge As System.Nullable(Of Integer)
+
+    Private _LowAge As System.Nullable(Of Integer)
+
+    Private _Review As String
+
+    Private _UserName As String
+
+    Private _Userid As System.Nullable(Of Integer)
+
+    Private _Approved As System.Nullable(Of Integer)
+
+    Private _Category As String
+
+    Private _Inserted As System.Nullable(Of Date)
+
+    Private _tiptype As System.Nullable(Of Integer)
+
+    Private _userage As System.Nullable(Of Integer)
+
+#Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
     End Sub
     Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
@@ -246,322 +246,324 @@ Partial Public Class tblAJBookTip
     End Sub
     Partial Private Sub OnuserageChanged()
     End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_TipID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
-	Public Property TipID() As Integer
-		Get
-			Return Me._TipID
-		End Get
-		Set
-			If ((Me._TipID = value)  _
-						= false) Then
-				Me.OnTipIDChanging(value)
-				Me.SendPropertyChanging
-				Me._TipID = value
-				Me.SendPropertyChanged("TipID")
-				Me.OnTipIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Title", DbType:="NVarChar(50)")>  _
-	Public Property Title() As String
-		Get
-			Return Me._Title
-		End Get
-		Set
-			If (String.Equals(Me._Title, value) = false) Then
-				Me.OnTitleChanging(value)
-				Me.SendPropertyChanging
-				Me._Title = value
-				Me.SendPropertyChanged("Title")
-				Me.OnTitleChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Bookid", DbType:="Int")>  _
-	Public Property Bookid() As System.Nullable(Of Integer)
-		Get
-			Return Me._Bookid
-		End Get
-		Set
-			If (Me._Bookid.Equals(value) = false) Then
-				Me.OnBookidChanging(value)
-				Me.SendPropertyChanging
-				Me._Bookid = value
-				Me.SendPropertyChanged("Bookid")
-				Me.OnBookidChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Author", DbType:="NVarChar(50)")>  _
-	Public Property Author() As String
-		Get
-			Return Me._Author
-		End Get
-		Set
-			If (String.Equals(Me._Author, value) = false) Then
-				Me.OnAuthorChanging(value)
-				Me.SendPropertyChanging
-				Me._Author = value
-				Me.SendPropertyChanged("Author")
-				Me.OnAuthorChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_HighAge", DbType:="Int")>  _
-	Public Property HighAge() As System.Nullable(Of Integer)
-		Get
-			Return Me._HighAge
-		End Get
-		Set
-			If (Me._HighAge.Equals(value) = false) Then
-				Me.OnHighAgeChanging(value)
-				Me.SendPropertyChanging
-				Me._HighAge = value
-				Me.SendPropertyChanged("HighAge")
-				Me.OnHighAgeChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LowAge", DbType:="Int")>  _
-	Public Property LowAge() As System.Nullable(Of Integer)
-		Get
-			Return Me._LowAge
-		End Get
-		Set
-			If (Me._LowAge.Equals(value) = false) Then
-				Me.OnLowAgeChanging(value)
-				Me.SendPropertyChanging
-				Me._LowAge = value
-				Me.SendPropertyChanged("LowAge")
-				Me.OnLowAgeChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Review", DbType:="NVarChar(4000)")>  _
-	Public Property Review() As String
-		Get
-			Return Me._Review
-		End Get
-		Set
-			If (String.Equals(Me._Review, value) = false) Then
-				Me.OnReviewChanging(value)
-				Me.SendPropertyChanging
-				Me._Review = value
-				Me.SendPropertyChanged("Review")
-				Me.OnReviewChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UserName", DbType:="NVarChar(50)")>  _
-	Public Property UserName() As String
-		Get
-			Return Me._UserName
-		End Get
-		Set
-			If (String.Equals(Me._UserName, value) = false) Then
-				Me.OnUserNameChanging(value)
-				Me.SendPropertyChanging
-				Me._UserName = value
-				Me.SendPropertyChanged("UserName")
-				Me.OnUserNameChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Userid", DbType:="Int")>  _
-	Public Property Userid() As System.Nullable(Of Integer)
-		Get
-			Return Me._Userid
-		End Get
-		Set
-			If (Me._Userid.Equals(value) = false) Then
-				Me.OnUseridChanging(value)
-				Me.SendPropertyChanging
-				Me._Userid = value
-				Me.SendPropertyChanged("Userid")
-				Me.OnUseridChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Approved", DbType:="Int")>  _
-	Public Property Approved() As System.Nullable(Of Integer)
-		Get
-			Return Me._Approved
-		End Get
-		Set
-			If (Me._Approved.Equals(value) = false) Then
-				Me.OnApprovedChanging(value)
-				Me.SendPropertyChanging
-				Me._Approved = value
-				Me.SendPropertyChanged("Approved")
-				Me.OnApprovedChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Category", DbType:="NVarChar(200)")>  _
-	Public Property Category() As String
-		Get
-			Return Me._Category
-		End Get
-		Set
-			If (String.Equals(Me._Category, value) = false) Then
-				Me.OnCategoryChanging(value)
-				Me.SendPropertyChanging
-				Me._Category = value
-				Me.SendPropertyChanged("Category")
-				Me.OnCategoryChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Inserted", DbType:="Date")>  _
-	Public Property Inserted() As System.Nullable(Of Date)
-		Get
-			Return Me._Inserted
-		End Get
-		Set
-			If (Me._Inserted.Equals(value) = false) Then
-				Me.OnInsertedChanging(value)
-				Me.SendPropertyChanging
-				Me._Inserted = value
-				Me.SendPropertyChanged("Inserted")
-				Me.OnInsertedChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_tiptype", DbType:="Int")>  _
-	Public Property tiptype() As System.Nullable(Of Integer)
-		Get
-			Return Me._tiptype
-		End Get
-		Set
-			If (Me._tiptype.Equals(value) = false) Then
-				Me.OntiptypeChanging(value)
-				Me.SendPropertyChanging
-				Me._tiptype = value
-				Me.SendPropertyChanged("tiptype")
-				Me.OntiptypeChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_userage", DbType:="Int")>  _
-	Public Property userage() As System.Nullable(Of Integer)
-		Get
-			Return Me._userage
-		End Get
-		Set
-			If (Me._userage.Equals(value) = false) Then
-				Me.OnuserageChanging(value)
-				Me.SendPropertyChanging
-				Me._userage = value
-				Me.SendPropertyChanged("userage")
-				Me.OnuserageChanged
-			End If
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
+#End Region
+
+    Public Sub New()
+        MyBase.New
+        OnCreated()
+    End Sub
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_TipID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=True, IsDbGenerated:=True)>
+    Public Property TipID() As Integer
+        Get
+            Return Me._TipID
+        End Get
+        Set
+            If ((Me._TipID = Value) _
+                        = False) Then
+                Me.OnTipIDChanging(Value)
+                Me.SendPropertyChanging()
+                Me._TipID = Value
+                Me.SendPropertyChanged("TipID")
+                Me.OnTipIDChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Title", DbType:="NVarChar(50)")>
+    Public Property Title() As String
+        Get
+            Return Me._Title
+        End Get
+        Set
+            If (String.Equals(Me._Title, Value) = False) Then
+                Me.OnTitleChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Title = Value
+                Me.SendPropertyChanged("Title")
+                Me.OnTitleChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Bookid", DbType:="Int")>
+    Public Property Bookid() As System.Nullable(Of Integer)
+        Get
+            Return Me._Bookid
+        End Get
+        Set
+            If (Me._Bookid.Equals(Value) = False) Then
+                Me.OnBookidChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Bookid = Value
+                Me.SendPropertyChanged("Bookid")
+                Me.OnBookidChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Author", DbType:="NVarChar(50)")>
+    Public Property Author() As String
+        Get
+            Return Me._Author
+        End Get
+        Set
+            If (String.Equals(Me._Author, Value) = False) Then
+                Me.OnAuthorChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Author = Value
+                Me.SendPropertyChanged("Author")
+                Me.OnAuthorChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_HighAge", DbType:="Int")>
+    Public Property HighAge() As System.Nullable(Of Integer)
+        Get
+            Return Me._HighAge
+        End Get
+        Set
+            If (Me._HighAge.Equals(Value) = False) Then
+                Me.OnHighAgeChanging(Value)
+                Me.SendPropertyChanging()
+                Me._HighAge = Value
+                Me.SendPropertyChanged("HighAge")
+                Me.OnHighAgeChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LowAge", DbType:="Int")>
+    Public Property LowAge() As System.Nullable(Of Integer)
+        Get
+            Return Me._LowAge
+        End Get
+        Set
+            If (Me._LowAge.Equals(Value) = False) Then
+                Me.OnLowAgeChanging(Value)
+                Me.SendPropertyChanging()
+                Me._LowAge = Value
+                Me.SendPropertyChanged("LowAge")
+                Me.OnLowAgeChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Review", DbType:="NVarChar(4000)")>
+    Public Property Review() As String
+        Get
+            Return Me._Review
+        End Get
+        Set
+            If (String.Equals(Me._Review, Value) = False) Then
+                Me.OnReviewChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Review = Value
+                Me.SendPropertyChanged("Review")
+                Me.OnReviewChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UserName", DbType:="NVarChar(50)")>
+    Public Property UserName() As String
+        Get
+            Return Me._UserName
+        End Get
+        Set
+            If (String.Equals(Me._UserName, Value) = False) Then
+                Me.OnUserNameChanging(Value)
+                Me.SendPropertyChanging()
+                Me._UserName = Value
+                Me.SendPropertyChanged("UserName")
+                Me.OnUserNameChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Userid", DbType:="Int")>
+    Public Property Userid() As System.Nullable(Of Integer)
+        Get
+            Return Me._Userid
+        End Get
+        Set
+            If (Me._Userid.Equals(Value) = False) Then
+                Me.OnUseridChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Userid = Value
+                Me.SendPropertyChanged("Userid")
+                Me.OnUseridChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Approved", DbType:="Int")>
+    Public Property Approved() As System.Nullable(Of Integer)
+        Get
+            Return Me._Approved
+        End Get
+        Set
+            If (Me._Approved.Equals(Value) = False) Then
+                Me.OnApprovedChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Approved = Value
+                Me.SendPropertyChanged("Approved")
+                Me.OnApprovedChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Category", DbType:="NVarChar(200)")>
+    Public Property Category() As String
+        Get
+            Return Me._Category
+        End Get
+        Set
+            If (String.Equals(Me._Category, Value) = False) Then
+                Me.OnCategoryChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Category = Value
+                Me.SendPropertyChanged("Category")
+                Me.OnCategoryChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Inserted", DbType:="Date")>
+    Public Property Inserted() As System.Nullable(Of Date)
+        Get
+            Return Me._Inserted
+        End Get
+        Set
+            If (Me._Inserted.Equals(Value) = False) Then
+                Me.OnInsertedChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Inserted = Value
+                Me.SendPropertyChanged("Inserted")
+                Me.OnInsertedChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_tiptype", DbType:="Int")>
+    Public Property tiptype() As System.Nullable(Of Integer)
+        Get
+            Return Me._tiptype
+        End Get
+        Set
+            If (Me._tiptype.Equals(Value) = False) Then
+                Me.OntiptypeChanging(Value)
+                Me.SendPropertyChanging()
+                Me._tiptype = Value
+                Me.SendPropertyChanged("tiptype")
+                Me.OntiptypeChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_userage", DbType:="Int")>
+    Public Property userage() As System.Nullable(Of Integer)
+        Get
+            Return Me._userage
+        End Get
+        Set
+            If (Me._userage.Equals(Value) = False) Then
+                Me.OnuserageChanging(Value)
+                Me.SendPropertyChanging()
+                Me._userage = Value
+                Me.SendPropertyChanged("userage")
+                Me.OnuserageChanged()
+            End If
+        End Set
+    End Property
+
+    Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+
+    Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+
+    Protected Overridable Sub SendPropertyChanging()
+        If ((Me.PropertyChangingEvent Is Nothing) _
+                    = False) Then
+            RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+        End If
+    End Sub
+
+    Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+        If ((Me.PropertyChangedEvent Is Nothing) _
+                    = False) Then
+            RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+        End If
+    End Sub
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tblAjKatalogBooks")>  _
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tblAjKatalogBooks")>
 Partial Public Class tblAjKatalogBook
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _bookID As Integer
-	
-	Private _ModuleID As System.Nullable(Of Integer)
-	
-	Private _Version As System.Nullable(Of Integer)
-	
-	Private _isbn As String
-	
-	Private _UserID As System.Nullable(Of Integer)
-	
-	Private _PublisherID As System.Nullable(Of Integer)
-	
-	Private _Inserted As System.Nullable(Of Date)
-	
-	Private _Changed As System.Nullable(Of Date)
-	
-	Private _Deleted As System.Nullable(Of Date)
-	
-	Private _Title As String
-	
-	Private _Subtitle As String
-	
-	Private _Serie As String
-	
-	Private _Serienr As String
-	
-	Private _Pages As System.Nullable(Of Integer)
-	
-	Private _Price As String
-	
-	Private _Language As String
-	
-	Private _Information As String
-	
-	Private _Synopsis As String
-	
-	Private _Published As String
-	
-	Private _presentation As String
-	
-	Private _presentationlink As String
-	
-	Private _ebooklink As String
-	
-	Private _newcopy As System.Nullable(Of Integer)
-	
-	Private _inserter As String
-	
-	Private _Lektor As System.Nullable(Of Integer)
-	
-	Private _TotVotes As System.Nullable(Of Integer)
-	
-	Private _Status As System.Nullable(Of Integer)
-	
-	Private _Bokjuryn As System.Nullable(Of Integer)
-	
-	Private _Easyread As System.Nullable(Of Integer)
-	
-    #Region "Extensibility Method Definitions"
+    Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+
+    Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+
+    Private _bookID As Integer
+
+    Private _ModuleID As System.Nullable(Of Integer)
+
+    Private _Version As System.Nullable(Of Long)
+
+    Private _isbn As String
+
+    Private _UserID As System.Nullable(Of Integer)
+
+    Private _PublisherID As System.Nullable(Of Integer)
+
+    Private _Inserted As System.Nullable(Of Date)
+
+    Private _Changed As System.Nullable(Of Date)
+
+    Private _Deleted As System.Nullable(Of Date)
+
+    Private _Title As String
+
+    Private _Subtitle As String
+
+    Private _Serie As String
+
+    Private _Serienr As String
+
+    Private _Pages As System.Nullable(Of Integer)
+
+    Private _Price As String
+
+    Private _Language As String
+
+    Private _Information As String
+
+    Private _Synopsis As String
+
+    Private _Published As String
+
+    Private _presentation As String
+
+    Private _presentationlink As String
+
+    Private _ebooklink As String
+
+    Private _newcopy As System.Nullable(Of Integer)
+
+    Private _inserter As String
+
+    Private _Lektor As System.Nullable(Of Integer)
+
+    Private _TotVotes As System.Nullable(Of Integer)
+
+    Private _Status As System.Nullable(Of Integer)
+
+    Private _Bokjuryn As System.Nullable(Of Integer)
+
+    Private _Easyread As System.Nullable(Of Integer)
+
+    Private _SSMA_TimeStamp As System.Data.Linq.Binary
+
+#Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
     End Sub
     Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
@@ -576,7 +578,7 @@ Partial Public Class tblAjKatalogBook
     End Sub
     Partial Private Sub OnModuleIDChanged()
     End Sub
-    Partial Private Sub OnVersionChanging(value As System.Nullable(Of Integer))
+    Partial Private Sub OnVersionChanging(value As System.Nullable(Of Long))
     End Sub
     Partial Private Sub OnVersionChanged()
     End Sub
@@ -684,481 +686,501 @@ Partial Public Class tblAjKatalogBook
     End Sub
     Partial Private Sub OnEasyreadChanged()
     End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_bookID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
-	Public Property bookID() As Integer
-		Get
-			Return Me._bookID
-		End Get
-		Set
-			If ((Me._bookID = value)  _
-						= false) Then
-				Me.OnbookIDChanging(value)
-				Me.SendPropertyChanging
-				Me._bookID = value
-				Me.SendPropertyChanged("bookID")
-				Me.OnbookIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ModuleID", DbType:="Int")>  _
-	Public Property ModuleID() As System.Nullable(Of Integer)
-		Get
-			Return Me._ModuleID
-		End Get
-		Set
-			If (Me._ModuleID.Equals(value) = false) Then
-				Me.OnModuleIDChanging(value)
-				Me.SendPropertyChanging
-				Me._ModuleID = value
-				Me.SendPropertyChanged("ModuleID")
-				Me.OnModuleIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Version", DbType:="Int")>  _
-	Public Property Version() As System.Nullable(Of Integer)
-		Get
-			Return Me._Version
-		End Get
-		Set
-			If (Me._Version.Equals(value) = false) Then
-				Me.OnVersionChanging(value)
-				Me.SendPropertyChanging
-				Me._Version = value
-				Me.SendPropertyChanged("Version")
-				Me.OnVersionChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_isbn", DbType:="NVarChar(255)")>  _
-	Public Property isbn() As String
-		Get
-			Return Me._isbn
-		End Get
-		Set
-			If (String.Equals(Me._isbn, value) = false) Then
-				Me.OnisbnChanging(value)
-				Me.SendPropertyChanging
-				Me._isbn = value
-				Me.SendPropertyChanged("isbn")
-				Me.OnisbnChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UserID", DbType:="Int")>  _
-	Public Property UserID() As System.Nullable(Of Integer)
-		Get
-			Return Me._UserID
-		End Get
-		Set
-			If (Me._UserID.Equals(value) = false) Then
-				Me.OnUserIDChanging(value)
-				Me.SendPropertyChanging
-				Me._UserID = value
-				Me.SendPropertyChanged("UserID")
-				Me.OnUserIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PublisherID", DbType:="Int")>  _
-	Public Property PublisherID() As System.Nullable(Of Integer)
-		Get
-			Return Me._PublisherID
-		End Get
-		Set
-			If (Me._PublisherID.Equals(value) = false) Then
-				Me.OnPublisherIDChanging(value)
-				Me.SendPropertyChanging
-				Me._PublisherID = value
-				Me.SendPropertyChanged("PublisherID")
-				Me.OnPublisherIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Inserted", DbType:="DateTime")>  _
-	Public Property Inserted() As System.Nullable(Of Date)
-		Get
-			Return Me._Inserted
-		End Get
-		Set
-			If (Me._Inserted.Equals(value) = false) Then
-				Me.OnInsertedChanging(value)
-				Me.SendPropertyChanging
-				Me._Inserted = value
-				Me.SendPropertyChanged("Inserted")
-				Me.OnInsertedChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Changed", DbType:="DateTime")>  _
-	Public Property Changed() As System.Nullable(Of Date)
-		Get
-			Return Me._Changed
-		End Get
-		Set
-			If (Me._Changed.Equals(value) = false) Then
-				Me.OnChangedChanging(value)
-				Me.SendPropertyChanging
-				Me._Changed = value
-				Me.SendPropertyChanged("Changed")
-				Me.OnChangedChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Deleted", DbType:="DateTime")>  _
-	Public Property Deleted() As System.Nullable(Of Date)
-		Get
-			Return Me._Deleted
-		End Get
-		Set
-			If (Me._Deleted.Equals(value) = false) Then
-				Me.OnDeletedChanging(value)
-				Me.SendPropertyChanging
-				Me._Deleted = value
-				Me.SendPropertyChanged("Deleted")
-				Me.OnDeletedChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Title", DbType:="NVarChar(255)")>  _
-	Public Property Title() As String
-		Get
-			Return Me._Title
-		End Get
-		Set
-			If (String.Equals(Me._Title, value) = false) Then
-				Me.OnTitleChanging(value)
-				Me.SendPropertyChanging
-				Me._Title = value
-				Me.SendPropertyChanged("Title")
-				Me.OnTitleChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Subtitle", DbType:="NVarChar(250)")>  _
-	Public Property Subtitle() As String
-		Get
-			Return Me._Subtitle
-		End Get
-		Set
-			If (String.Equals(Me._Subtitle, value) = false) Then
-				Me.OnSubtitleChanging(value)
-				Me.SendPropertyChanging
-				Me._Subtitle = value
-				Me.SendPropertyChanged("Subtitle")
-				Me.OnSubtitleChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Serie", DbType:="NVarChar(255)")>  _
-	Public Property Serie() As String
-		Get
-			Return Me._Serie
-		End Get
-		Set
-			If (String.Equals(Me._Serie, value) = false) Then
-				Me.OnSerieChanging(value)
-				Me.SendPropertyChanging
-				Me._Serie = value
-				Me.SendPropertyChanged("Serie")
-				Me.OnSerieChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Serienr", DbType:="NVarChar(50)")>  _
-	Public Property Serienr() As String
-		Get
-			Return Me._Serienr
-		End Get
-		Set
-			If (String.Equals(Me._Serienr, value) = false) Then
-				Me.OnSerienrChanging(value)
-				Me.SendPropertyChanging
-				Me._Serienr = value
-				Me.SendPropertyChanged("Serienr")
-				Me.OnSerienrChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Pages", DbType:="Int")>  _
-	Public Property Pages() As System.Nullable(Of Integer)
-		Get
-			Return Me._Pages
-		End Get
-		Set
-			If (Me._Pages.Equals(value) = false) Then
-				Me.OnPagesChanging(value)
-				Me.SendPropertyChanging
-				Me._Pages = value
-				Me.SendPropertyChanged("Pages")
-				Me.OnPagesChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Price", DbType:="NVarChar(50)")>  _
-	Public Property Price() As String
-		Get
-			Return Me._Price
-		End Get
-		Set
-			If (String.Equals(Me._Price, value) = false) Then
-				Me.OnPriceChanging(value)
-				Me.SendPropertyChanging
-				Me._Price = value
-				Me.SendPropertyChanged("Price")
-				Me.OnPriceChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Language", DbType:="NVarChar(50)")>  _
-	Public Property Language() As String
-		Get
-			Return Me._Language
-		End Get
-		Set
-			If (String.Equals(Me._Language, value) = false) Then
-				Me.OnLanguageChanging(value)
-				Me.SendPropertyChanging
-				Me._Language = value
-				Me.SendPropertyChanged("Language")
-				Me.OnLanguageChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Information", DbType:="NVarChar(MAX)")>  _
-	Public Property Information() As String
-		Get
-			Return Me._Information
-		End Get
-		Set
-			If (String.Equals(Me._Information, value) = false) Then
-				Me.OnInformationChanging(value)
-				Me.SendPropertyChanging
-				Me._Information = value
-				Me.SendPropertyChanged("Information")
-				Me.OnInformationChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Synopsis", DbType:="NVarChar(MAX)")>  _
-	Public Property Synopsis() As String
-		Get
-			Return Me._Synopsis
-		End Get
-		Set
-			If (String.Equals(Me._Synopsis, value) = false) Then
-				Me.OnSynopsisChanging(value)
-				Me.SendPropertyChanging
-				Me._Synopsis = value
-				Me.SendPropertyChanged("Synopsis")
-				Me.OnSynopsisChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Published", DbType:="NVarChar(50)")>  _
-	Public Property Published() As String
-		Get
-			Return Me._Published
-		End Get
-		Set
-			If (String.Equals(Me._Published, value) = false) Then
-				Me.OnPublishedChanging(value)
-				Me.SendPropertyChanging
-				Me._Published = value
-				Me.SendPropertyChanged("Published")
-				Me.OnPublishedChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_presentation", DbType:="NVarChar(MAX)")>  _
-	Public Property presentation() As String
-		Get
-			Return Me._presentation
-		End Get
-		Set
-			If (String.Equals(Me._presentation, value) = false) Then
-				Me.OnpresentationChanging(value)
-				Me.SendPropertyChanging
-				Me._presentation = value
-				Me.SendPropertyChanged("presentation")
-				Me.OnpresentationChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_presentationlink", DbType:="NVarChar(200)")>  _
-	Public Property presentationlink() As String
-		Get
-			Return Me._presentationlink
-		End Get
-		Set
-			If (String.Equals(Me._presentationlink, value) = false) Then
-				Me.OnpresentationlinkChanging(value)
-				Me.SendPropertyChanging
-				Me._presentationlink = value
-				Me.SendPropertyChanged("presentationlink")
-				Me.OnpresentationlinkChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ebooklink", DbType:="NVarChar(200)")>  _
-	Public Property ebooklink() As String
-		Get
-			Return Me._ebooklink
-		End Get
-		Set
-			If (String.Equals(Me._ebooklink, value) = false) Then
-				Me.OnebooklinkChanging(value)
-				Me.SendPropertyChanging
-				Me._ebooklink = value
-				Me.SendPropertyChanged("ebooklink")
-				Me.OnebooklinkChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_newcopy", DbType:="Int")>  _
-	Public Property newcopy() As System.Nullable(Of Integer)
-		Get
-			Return Me._newcopy
-		End Get
-		Set
-			If (Me._newcopy.Equals(value) = false) Then
-				Me.OnnewcopyChanging(value)
-				Me.SendPropertyChanging
-				Me._newcopy = value
-				Me.SendPropertyChanged("newcopy")
-				Me.OnnewcopyChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_inserter", DbType:="NVarChar(50)")>  _
-	Public Property inserter() As String
-		Get
-			Return Me._inserter
-		End Get
-		Set
-			If (String.Equals(Me._inserter, value) = false) Then
-				Me.OninserterChanging(value)
-				Me.SendPropertyChanging
-				Me._inserter = value
-				Me.SendPropertyChanged("inserter")
-				Me.OninserterChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Lektor", DbType:="Int")>  _
-	Public Property Lektor() As System.Nullable(Of Integer)
-		Get
-			Return Me._Lektor
-		End Get
-		Set
-			If (Me._Lektor.Equals(value) = false) Then
-				Me.OnLektorChanging(value)
-				Me.SendPropertyChanging
-				Me._Lektor = value
-				Me.SendPropertyChanged("Lektor")
-				Me.OnLektorChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_TotVotes", DbType:="Int")>  _
-	Public Property TotVotes() As System.Nullable(Of Integer)
-		Get
-			Return Me._TotVotes
-		End Get
-		Set
-			If (Me._TotVotes.Equals(value) = false) Then
-				Me.OnTotVotesChanging(value)
-				Me.SendPropertyChanging
-				Me._TotVotes = value
-				Me.SendPropertyChanged("TotVotes")
-				Me.OnTotVotesChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Status", DbType:="Int")>  _
-	Public Property Status() As System.Nullable(Of Integer)
-		Get
-			Return Me._Status
-		End Get
-		Set
-			If (Me._Status.Equals(value) = false) Then
-				Me.OnStatusChanging(value)
-				Me.SendPropertyChanging
-				Me._Status = value
-				Me.SendPropertyChanged("Status")
-				Me.OnStatusChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Bokjuryn", DbType:="Int")>  _
-	Public Property Bokjuryn() As System.Nullable(Of Integer)
-		Get
-			Return Me._Bokjuryn
-		End Get
-		Set
-			If (Me._Bokjuryn.Equals(value) = false) Then
-				Me.OnBokjurynChanging(value)
-				Me.SendPropertyChanging
-				Me._Bokjuryn = value
-				Me.SendPropertyChanged("Bokjuryn")
-				Me.OnBokjurynChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Easyread", DbType:="Int")>  _
-	Public Property Easyread() As System.Nullable(Of Integer)
-		Get
-			Return Me._Easyread
-		End Get
-		Set
-			If (Me._Easyread.Equals(value) = false) Then
-				Me.OnEasyreadChanging(value)
-				Me.SendPropertyChanging
-				Me._Easyread = value
-				Me.SendPropertyChanged("Easyread")
-				Me.OnEasyreadChanged
-			End If
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+    Partial Private Sub OnSSMA_TimeStampChanging(value As System.Data.Linq.Binary)
+    End Sub
+    Partial Private Sub OnSSMA_TimeStampChanged()
+    End Sub
+#End Region
+
+    Public Sub New()
+        MyBase.New
+        OnCreated()
+    End Sub
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_bookID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=True, IsDbGenerated:=True, UpdateCheck:=UpdateCheck.Never)>
+    Public Property bookID() As Integer
+        Get
+            Return Me._bookID
+        End Get
+        Set
+            If ((Me._bookID = Value) _
+                        = False) Then
+                Me.OnbookIDChanging(Value)
+                Me.SendPropertyChanging()
+                Me._bookID = Value
+                Me.SendPropertyChanged("bookID")
+                Me.OnbookIDChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ModuleID", DbType:="Int", UpdateCheck:=UpdateCheck.Never)>
+    Public Property ModuleID() As System.Nullable(Of Integer)
+        Get
+            Return Me._ModuleID
+        End Get
+        Set
+            If (Me._ModuleID.Equals(Value) = False) Then
+                Me.OnModuleIDChanging(Value)
+                Me.SendPropertyChanging()
+                Me._ModuleID = Value
+                Me.SendPropertyChanged("ModuleID")
+                Me.OnModuleIDChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Version", DbType:="BigInt", UpdateCheck:=UpdateCheck.Never)>
+    Public Property Version() As System.Nullable(Of Long)
+        Get
+            Return Me._Version
+        End Get
+        Set
+            If (Me._Version.Equals(Value) = False) Then
+                Me.OnVersionChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Version = Value
+                Me.SendPropertyChanged("Version")
+                Me.OnVersionChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_isbn", DbType:="NVarChar(255)", UpdateCheck:=UpdateCheck.Never)>
+    Public Property isbn() As String
+        Get
+            Return Me._isbn
+        End Get
+        Set
+            If (String.Equals(Me._isbn, Value) = False) Then
+                Me.OnisbnChanging(Value)
+                Me.SendPropertyChanging()
+                Me._isbn = Value
+                Me.SendPropertyChanged("isbn")
+                Me.OnisbnChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UserID", DbType:="Int", UpdateCheck:=UpdateCheck.Never)>
+    Public Property UserID() As System.Nullable(Of Integer)
+        Get
+            Return Me._UserID
+        End Get
+        Set
+            If (Me._UserID.Equals(Value) = False) Then
+                Me.OnUserIDChanging(Value)
+                Me.SendPropertyChanging()
+                Me._UserID = Value
+                Me.SendPropertyChanged("UserID")
+                Me.OnUserIDChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PublisherID", DbType:="Int", UpdateCheck:=UpdateCheck.Never)>
+    Public Property PublisherID() As System.Nullable(Of Integer)
+        Get
+            Return Me._PublisherID
+        End Get
+        Set
+            If (Me._PublisherID.Equals(Value) = False) Then
+                Me.OnPublisherIDChanging(Value)
+                Me.SendPropertyChanging()
+                Me._PublisherID = Value
+                Me.SendPropertyChanged("PublisherID")
+                Me.OnPublisherIDChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Inserted", DbType:="DateTime", UpdateCheck:=UpdateCheck.Never)>
+    Public Property Inserted() As System.Nullable(Of Date)
+        Get
+            Return Me._Inserted
+        End Get
+        Set
+            If (Me._Inserted.Equals(Value) = False) Then
+                Me.OnInsertedChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Inserted = Value
+                Me.SendPropertyChanged("Inserted")
+                Me.OnInsertedChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Changed", DbType:="DateTime", UpdateCheck:=UpdateCheck.Never)>
+    Public Property Changed() As System.Nullable(Of Date)
+        Get
+            Return Me._Changed
+        End Get
+        Set
+            If (Me._Changed.Equals(Value) = False) Then
+                Me.OnChangedChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Changed = Value
+                Me.SendPropertyChanged("Changed")
+                Me.OnChangedChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Deleted", DbType:="DateTime", UpdateCheck:=UpdateCheck.Never)>
+    Public Property Deleted() As System.Nullable(Of Date)
+        Get
+            Return Me._Deleted
+        End Get
+        Set
+            If (Me._Deleted.Equals(Value) = False) Then
+                Me.OnDeletedChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Deleted = Value
+                Me.SendPropertyChanged("Deleted")
+                Me.OnDeletedChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Title", DbType:="NVarChar(255)", UpdateCheck:=UpdateCheck.Never)>
+    Public Property Title() As String
+        Get
+            Return Me._Title
+        End Get
+        Set
+            If (String.Equals(Me._Title, Value) = False) Then
+                Me.OnTitleChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Title = Value
+                Me.SendPropertyChanged("Title")
+                Me.OnTitleChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Subtitle", DbType:="NVarChar(255)", UpdateCheck:=UpdateCheck.Never)>
+    Public Property Subtitle() As String
+        Get
+            Return Me._Subtitle
+        End Get
+        Set
+            If (String.Equals(Me._Subtitle, Value) = False) Then
+                Me.OnSubtitleChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Subtitle = Value
+                Me.SendPropertyChanged("Subtitle")
+                Me.OnSubtitleChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Serie", DbType:="NVarChar(255)", UpdateCheck:=UpdateCheck.Never)>
+    Public Property Serie() As String
+        Get
+            Return Me._Serie
+        End Get
+        Set
+            If (String.Equals(Me._Serie, Value) = False) Then
+                Me.OnSerieChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Serie = Value
+                Me.SendPropertyChanged("Serie")
+                Me.OnSerieChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Serienr", DbType:="NVarChar(255)", UpdateCheck:=UpdateCheck.Never)>
+    Public Property Serienr() As String
+        Get
+            Return Me._Serienr
+        End Get
+        Set
+            If (String.Equals(Me._Serienr, Value) = False) Then
+                Me.OnSerienrChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Serienr = Value
+                Me.SendPropertyChanged("Serienr")
+                Me.OnSerienrChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Pages", DbType:="Int", UpdateCheck:=UpdateCheck.Never)>
+    Public Property Pages() As System.Nullable(Of Integer)
+        Get
+            Return Me._Pages
+        End Get
+        Set
+            If (Me._Pages.Equals(Value) = False) Then
+                Me.OnPagesChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Pages = Value
+                Me.SendPropertyChanged("Pages")
+                Me.OnPagesChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Price", DbType:="NVarChar(50)", UpdateCheck:=UpdateCheck.Never)>
+    Public Property Price() As String
+        Get
+            Return Me._Price
+        End Get
+        Set
+            If (String.Equals(Me._Price, Value) = False) Then
+                Me.OnPriceChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Price = Value
+                Me.SendPropertyChanged("Price")
+                Me.OnPriceChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Language", DbType:="NVarChar(50)", UpdateCheck:=UpdateCheck.Never)>
+    Public Property Language() As String
+        Get
+            Return Me._Language
+        End Get
+        Set
+            If (String.Equals(Me._Language, Value) = False) Then
+                Me.OnLanguageChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Language = Value
+                Me.SendPropertyChanged("Language")
+                Me.OnLanguageChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Information", DbType:="NVarChar(2000)", UpdateCheck:=UpdateCheck.Never)>
+    Public Property Information() As String
+        Get
+            Return Me._Information
+        End Get
+        Set
+            If (String.Equals(Me._Information, Value) = False) Then
+                Me.OnInformationChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Information = Value
+                Me.SendPropertyChanged("Information")
+                Me.OnInformationChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Synopsis", DbType:="NVarChar(MAX)", UpdateCheck:=UpdateCheck.Never)>
+    Public Property Synopsis() As String
+        Get
+            Return Me._Synopsis
+        End Get
+        Set
+            If (String.Equals(Me._Synopsis, Value) = False) Then
+                Me.OnSynopsisChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Synopsis = Value
+                Me.SendPropertyChanged("Synopsis")
+                Me.OnSynopsisChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Published", DbType:="NVarChar(50)", UpdateCheck:=UpdateCheck.Never)>
+    Public Property Published() As String
+        Get
+            Return Me._Published
+        End Get
+        Set
+            If (String.Equals(Me._Published, Value) = False) Then
+                Me.OnPublishedChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Published = Value
+                Me.SendPropertyChanged("Published")
+                Me.OnPublishedChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_presentation", DbType:="NVarChar(MAX)", UpdateCheck:=UpdateCheck.Never)>
+    Public Property presentation() As String
+        Get
+            Return Me._presentation
+        End Get
+        Set
+            If (String.Equals(Me._presentation, Value) = False) Then
+                Me.OnpresentationChanging(Value)
+                Me.SendPropertyChanging()
+                Me._presentation = Value
+                Me.SendPropertyChanged("presentation")
+                Me.OnpresentationChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_presentationlink", DbType:="NVarChar(200)", UpdateCheck:=UpdateCheck.Never)>
+    Public Property presentationlink() As String
+        Get
+            Return Me._presentationlink
+        End Get
+        Set
+            If (String.Equals(Me._presentationlink, Value) = False) Then
+                Me.OnpresentationlinkChanging(Value)
+                Me.SendPropertyChanging()
+                Me._presentationlink = Value
+                Me.SendPropertyChanged("presentationlink")
+                Me.OnpresentationlinkChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ebooklink", DbType:="NVarChar(200)", UpdateCheck:=UpdateCheck.Never)>
+    Public Property ebooklink() As String
+        Get
+            Return Me._ebooklink
+        End Get
+        Set
+            If (String.Equals(Me._ebooklink, Value) = False) Then
+                Me.OnebooklinkChanging(Value)
+                Me.SendPropertyChanging()
+                Me._ebooklink = Value
+                Me.SendPropertyChanged("ebooklink")
+                Me.OnebooklinkChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_newcopy", DbType:="Int", UpdateCheck:=UpdateCheck.Never)>
+    Public Property newcopy() As System.Nullable(Of Integer)
+        Get
+            Return Me._newcopy
+        End Get
+        Set
+            If (Me._newcopy.Equals(Value) = False) Then
+                Me.OnnewcopyChanging(Value)
+                Me.SendPropertyChanging()
+                Me._newcopy = Value
+                Me.SendPropertyChanged("newcopy")
+                Me.OnnewcopyChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_inserter", DbType:="NVarChar(50)", UpdateCheck:=UpdateCheck.Never)>
+    Public Property inserter() As String
+        Get
+            Return Me._inserter
+        End Get
+        Set
+            If (String.Equals(Me._inserter, Value) = False) Then
+                Me.OninserterChanging(Value)
+                Me.SendPropertyChanging()
+                Me._inserter = Value
+                Me.SendPropertyChanged("inserter")
+                Me.OninserterChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Lektor", DbType:="Int", UpdateCheck:=UpdateCheck.Never)>
+    Public Property Lektor() As System.Nullable(Of Integer)
+        Get
+            Return Me._Lektor
+        End Get
+        Set
+            If (Me._Lektor.Equals(Value) = False) Then
+                Me.OnLektorChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Lektor = Value
+                Me.SendPropertyChanged("Lektor")
+                Me.OnLektorChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_TotVotes", DbType:="Int", UpdateCheck:=UpdateCheck.Never)>
+    Public Property TotVotes() As System.Nullable(Of Integer)
+        Get
+            Return Me._TotVotes
+        End Get
+        Set
+            If (Me._TotVotes.Equals(Value) = False) Then
+                Me.OnTotVotesChanging(Value)
+                Me.SendPropertyChanging()
+                Me._TotVotes = Value
+                Me.SendPropertyChanged("TotVotes")
+                Me.OnTotVotesChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Status", DbType:="Int", UpdateCheck:=UpdateCheck.Never)>
+    Public Property Status() As System.Nullable(Of Integer)
+        Get
+            Return Me._Status
+        End Get
+        Set
+            If (Me._Status.Equals(Value) = False) Then
+                Me.OnStatusChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Status = Value
+                Me.SendPropertyChanged("Status")
+                Me.OnStatusChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Bokjuryn", DbType:="Int", UpdateCheck:=UpdateCheck.Never)>
+    Public Property Bokjuryn() As System.Nullable(Of Integer)
+        Get
+            Return Me._Bokjuryn
+        End Get
+        Set
+            If (Me._Bokjuryn.Equals(Value) = False) Then
+                Me.OnBokjurynChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Bokjuryn = Value
+                Me.SendPropertyChanged("Bokjuryn")
+                Me.OnBokjurynChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Easyread", DbType:="Int", UpdateCheck:=UpdateCheck.Never)>
+    Public Property Easyread() As System.Nullable(Of Integer)
+        Get
+            Return Me._Easyread
+        End Get
+        Set
+            If (Me._Easyread.Equals(Value) = False) Then
+                Me.OnEasyreadChanging(Value)
+                Me.SendPropertyChanging()
+                Me._Easyread = Value
+                Me.SendPropertyChanged("Easyread")
+                Me.OnEasyreadChanged()
+            End If
+        End Set
+    End Property
+
+    <Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SSMA_TimeStamp", AutoSync:=AutoSync.Always, DbType:="rowversion NOT NULL", CanBeNull:=False, IsDbGenerated:=True, IsVersion:=True, UpdateCheck:=UpdateCheck.Never)>
+    Public Property SSMA_TimeStamp() As System.Data.Linq.Binary
+        Get
+            Return Me._SSMA_TimeStamp
+        End Get
+        Set
+            If (Object.Equals(Me._SSMA_TimeStamp, Value) = False) Then
+                Me.OnSSMA_TimeStampChanging(Value)
+                Me.SendPropertyChanging()
+                Me._SSMA_TimeStamp = Value
+                Me.SendPropertyChanged("SSMA_TimeStamp")
+                Me.OnSSMA_TimeStampChanged()
+            End If
+        End Set
+    End Property
+
+    Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+
+    Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
 	
 	Protected Overridable Sub SendPropertyChanging()
 		If ((Me.PropertyChangingEvent Is Nothing)  _

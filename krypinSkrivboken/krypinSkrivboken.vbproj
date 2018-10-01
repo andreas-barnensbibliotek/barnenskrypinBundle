@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="Dal\connectionstringHandler.vb" />
     <Compile Include="Dal\skrivbokenDAL.vb" />
+    <Compile Include="helper\skrivbokenSecurity.vb" />
     <Compile Include="info\commandTypeInfo.vb" />
     <Compile Include="info\skrivbokenJsonContainerInfo.vb" />
     <Compile Include="info\skrivItemInfo.vb" />

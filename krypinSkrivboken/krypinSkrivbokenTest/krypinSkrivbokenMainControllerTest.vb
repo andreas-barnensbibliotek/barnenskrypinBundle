@@ -4,37 +4,67 @@ Imports krypinSkrivboken
 
 <TestClass()> Public Class krypinSkrivbokenMainControllerTest
 
+
     <TestMethod()> Public Sub TESTgetbyuserid()
+        ' cmdtyp.getpublishTyp 1 = hämtar användarens data (userid requred) som är antingen 
+        '               Approved:
+        '                   1 Ja(default) el 
+        '                   0 Nej
+        '               Publish:
+        '                   1 publicerad,
+        '                   2 privat,
+        '                   3 publik(default) 
+        ' cmdtyp.getpublishTyp 2 = hämtar användarens data (userid requred) oavsett om den är approved eller ej eller vilken publish den är
+
+
         Dim searchobj As New commandTypeInfo
-        searchobj.Userid = 14286
+        searchobj.Userid = 105
         searchobj.GetPublishTyp = 1
+        'searchobj.Approved = 1
+        'searchobj.Publish = 1
 
         Dim testar As New krypinSkrivbokenMainController
-        Dim listan As List(Of skrivItemInfo) = testar.getSkrivbokByUserid(searchobj)
-
-        Dim texten As String = listan(0).Title
+        Dim retobj As New skrivbokenJsonContainerInfo
+        retobj = testar.getSkrivbokByUserid(searchobj)
+        Dim texten As String = retobj.SkrivbokenList(0).Title
 
     End Sub
     <TestMethod()> Public Sub TESTgetbyCategory()
+        ' cmdtyp.category hämtar vald kategori som är antingen
+        '               Approved:
+        '                   1 Ja(default) el 
+        '                   0 Nej
+        '               Publish:
+        '                   1 publicerad,
+        '                   2 privat,
+        '                   3 publik(default) 
+
         Dim searchobj As New commandTypeInfo
-        searchobj.Category = 12
-        searchobj.GetPublishTyp = 1
+        searchobj.Category = 10
+        searchobj.GetPublishTyp = 2
+        searchobj.Approved = 0
 
+        searchobj.Userid = 105
         Dim testar As New krypinSkrivbokenMainController
-        Dim listan As List(Of skrivItemInfo) = testar.getSkrivbokByCategory(searchobj)
 
-        Dim texten As String = listan(0).Title
+        Dim retobj As New skrivbokenJsonContainerInfo
+        retobj = testar.getSkrivbokByCategory(searchobj)
+        Dim texten As String = retobj.SkrivbokenList(0).Title
+
 
     End Sub
 
     <TestMethod()> Public Sub TESTgetbySkrivid()
         Dim searchobj As New commandTypeInfo
-        searchobj.Skrivid = 198
+        searchobj.Skrivid = 36
+        searchobj.Userid = 14335
+
 
         Dim testar As New krypinSkrivbokenMainController
-        Dim listan As List(Of skrivItemInfo) = testar.getSkrivbokBySkrivid(searchobj)
 
-        Dim texten As String = listan(0).Title
+        Dim retobj As New skrivbokenJsonContainerInfo
+        retobj = testar.getSkrivbokBySkrivid(searchobj)
+        Dim texten As String = retobj.SkrivbokenList(0).Title
 
     End Sub
 
@@ -44,12 +74,12 @@ Imports krypinSkrivboken
 
         Dim cruddata As New skrivItemInfo
         With cruddata
-            .Approved = 1
+            .Approved = 0
             .Category = 1
             .Gillar = 0
-            .Publish = 0
+            .Publish = 1
             .Story = "Här kommer den långa texten: Ny"
-            .UserID = 105
+            .UserID = 7017
         End With
 
         Dim testar As New krypinSkrivbokenMainController

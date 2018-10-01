@@ -4,8 +4,14 @@
     Private _linqObj As New skrivbokenLinqDataContext(connectionObj.CurrentConnectionString)
 
     Public Function getskrivbokByUserid(cmdtyp As commandTypeInfo) As List(Of skrivItemInfo)
-        ' cmdtyp.getpublishTyp 1 = hämtar användarens data (userid requred) som är antingen approved 1(default) el 0 och
-        '                   publicerad 1,2 privat el 3 publik(default)
+        ' cmdtyp.getpublishTyp 1 = hämtar användarens data (userid requred) som är antingen 
+        '                   Approved:
+        '                   1 Ja(default) el 
+        '                   0 Nej
+        '                   Publish:
+        '                   1 publicerad,
+        '                   2 privat,
+        '                   3 publik(default) 
         ' cmdtyp.getpublishTyp 2 = hämtar användarens data (userid requred) oavsett om den är approved eller ej eller vilken publish den är
 
         Dim tmpobj As New List(Of skrivItemInfo)
@@ -67,6 +73,89 @@
         Return tmpobj
 
     End Function
+
+#Region "usersecurity"
+
+    Public Function checkUserAdminRoll(incuserid As Integer) As Boolean
+        Dim ret As Boolean = False
+        Dim tmpobj As New List(Of skrivItemInfo)
+        Dim arr = From p In _linqObj.UserRoles
+                  Where p.UserID = incuserid
+                  Select p
+
+        For Each t In arr
+            If t.RoleID = 0 Then
+                ret = True
+                Exit For
+            End If
+        Next
+
+        Return ret
+
+    End Function
+
+    Public Function checkIFuserIsSecure(val As Integer, cmdtyp As commandTypeInfo) As Boolean
+        Dim ret As Boolean = False
+        Dim arr As New Object
+        Dim tmpobj As New List(Of skrivItemInfo)
+        Select Case val
+            Case 1
+                arr = (From p In _linqObj.AJ_BB_Krypin_skrivbok_byUserid(cmdtyp.GetPublishTyp, cmdtyp.Userid, cmdtyp.Approved, cmdtyp.Publish)
+                       Select p).First
+            Case 2
+                arr = (From p In _linqObj.AJ_BB_Krypin_skrivbok_byCategory(cmdtyp.Category, cmdtyp.Approved, cmdtyp.Publish)
+                       Select p).First
+            Case 3
+                arr = (From p In _linqObj.AJ_BB_Krypin_skrivbok_bySkrivID(cmdtyp.Skrivid)
+                       Select p).First
+        End Select
+
+        If arr.Userid = cmdtyp.Userid Then
+            ret = True
+        End If
+
+        Return ret
+    End Function
+
+    Public Function checkIFuserIsSecureBySkrivID(cmdtyp As commandTypeInfo) As Boolean
+        Dim ret As Boolean = False
+        Dim arr As New Object
+        Dim tmpobj As New List(Of skrivItemInfo)
+
+        arr = (From p In _linqObj.AJ_BB_Krypin_skrivbok_bySkrivID(cmdtyp.Skrivid)
+               Select p).First
+
+        If arr.Userid = cmdtyp.Userid Then
+            ret = True
+        Else
+            If arr.Approved = 1 And arr.Publish = 3 Then
+                ret = True
+            End If
+        End If
+
+        Return ret
+    End Function
+
+    Public Function isUserOnline(userid As Integer) As Boolean
+        Dim ret As Boolean = False
+        Try
+            Dim useronline = From e In _linqObj.UsersOnlines
+                             Where e.UserID = userid
+                             Select e
+
+            For Each itm In useronline
+                ret = True
+                Exit For
+            Next
+
+        Catch ex As Exception
+            ret = False
+        End Try
+
+        Return ret
+    End Function
+
+#End Region
 
 #Region "CRUD"
     'ADD

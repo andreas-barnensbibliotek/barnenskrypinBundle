@@ -64,7 +64,7 @@
     End Function
 
 
-    Function BookTipsLatest(Optional antal As Integer = 5) As krypinBoktipsInfo
+    Public Function BookTipsLatest(Optional antal As Integer = 5) As krypinBoktipsInfo
         Dim retobj As New krypinBoktipsInfo
         Dim ageValObj As New BooktipsByDateController
 
@@ -80,7 +80,7 @@
 
     End Function
 
-    Function BookTipsBySearch(Search As String) As krypinBoktipsInfo
+    Public Function BookTipsBySearch(Search As String) As krypinBoktipsInfo
         Dim retobj As New krypinBoktipsInfo
         Dim bookTipSearchObj As New BookTipsBySearchController
 
@@ -147,7 +147,7 @@
         Dim obj As New BookTipsByTipIdController
 
         Try
-            booktiplist.Add(obj.getbooktip(tipid))
+            booktiplist.Add(obj.getbooktipByTipid(tipid))
             retobj.Boktips = booktiplist
             retobj.Status = "Boktips by boktips id completed"
         Catch ex As Exception
@@ -157,6 +157,39 @@
 
         Return retobj
 
+    End Function
+
+    Public Function booktipByUserId(userid As Integer) As krypinBoktipsInfo
+        Dim retobj As New krypinBoktipsInfo
+        Dim booktiplist As New List(Of boktipsInfo)
+        Dim obj As New BookTipsByUserIdController
+
+        Try
+            booktiplist = obj.getbooktipByUserid(userid)
+            retobj.Boktips = booktiplist
+            retobj.Status = "Boktips by userid completed"
+        Catch ex As Exception
+            retobj.Status = "ERROR booktipByTipId"
+
+        End Try
+
+        Return retobj
+
+    End Function
+
+    Public Function boktipsGetBookContextByBookID(bookid As Integer) As krypinBoktipsInfo
+        Dim retobj As New krypinBoktipsInfo
+        Dim bookcontextObj As New BookTipsBookContextByBookIDController
+
+        Try
+            retobj.Boktips = bookcontextObj.bookContextByBookid(bookid)
+            retobj.Status = "Boktips book context collected"
+
+        Catch ex As Exception
+            retobj.Status = "ERROR bookContextByBookid"
+
+        End Try
+        Return retobj
     End Function
 #Region "Externa Resurser"
     Public Function BookTipsByRandom(Optional antal As Integer = 1) As krypinBoktipsInfo

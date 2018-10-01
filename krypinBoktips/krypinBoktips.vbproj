@@ -79,6 +79,8 @@
     <Compile Include="controllers\BooktipsByDateController.vb" />
     <Compile Include="controllers\BookTipsByRatingController.vb" />
     <Compile Include="controllers\BookTipsBySearchController.vb" />
+    <Compile Include="controllers\BookTipsBookContextByBookIDController.vb" />
+    <Compile Include="controllers\BookTipsByUserIdController.vb" />
     <Compile Include="controllers\BookTipsByTipIdController.vb" />
     <Compile Include="controllers\BookTipsByTitleController.vb" />
     <Compile Include="controllers\BooktTipsByRandomController.vb" />
@@ -86,9 +88,11 @@
     <Compile Include="dal\boktipsAuthorDAL.vb" />
     <Compile Include="dal\boktipsCategoryDAL.vb" />
     <Compile Include="dal\boktipsDateDAL.vb" />
+    <Compile Include="dal\boktipsByUseridDAL.vb" />
     <Compile Include="dal\boktipsGetAllDAL.vb" />
     <Compile Include="dal\boktipsRatingDAL.vb" />
     <Compile Include="dal\boktipsTitleDAL.vb" />
+    <Compile Include="dal\BookContextDAL.vb" />
     <Compile Include="dal\connectionstringHandler.vb" />
     <Compile Include="dal\CRUDBoktipsDAL.vb" />
     <Compile Include="helper\boktipsImgSrcCombiner.vb" />

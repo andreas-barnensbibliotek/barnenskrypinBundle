@@ -29,7 +29,18 @@ Imports krypinBoktips
 
         Dim obj As New krypinBoktipsMainController
 
-        status = obj.booktipByTipId(1463)
+        status = obj.booktipByTipId(1476)
+
+
+        Dim ret As krypinBoktipsInfo = status
+
+    End Sub
+    <TestMethod()> Public Sub getBookTipsByUseridTEST()
+        Dim status As New krypinBoktipsInfo
+
+        Dim obj As New krypinBoktipsMainController
+
+        status = obj.booktipByUserId(7017)
 
 
         Dim ret As krypinBoktipsInfo = status
@@ -84,5 +95,14 @@ Imports krypinBoktips
 
 
     End Function
+    <TestMethod()> Public Sub getBookTipsContextTEST()
+        Dim status As New krypinBoktipsInfo
+        Dim obj As New krypinBoktipsMainController
 
+        status = obj.boktipsGetBookContextByBookID(10438)
+
+
+        Dim ret As String = status.Status
+
+    End Sub
 End Class

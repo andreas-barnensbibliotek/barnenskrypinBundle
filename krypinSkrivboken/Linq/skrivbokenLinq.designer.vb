@@ -43,6 +43,18 @@ Partial Public Class skrivbokenLinqDataContext
     End Sub
   Partial Private Sub DeletetblAJBarnensSkriv(instance As tblAJBarnensSkriv)
     End Sub
+  Partial Private Sub InsertUserRole(instance As UserRole)
+    End Sub
+  Partial Private Sub UpdateUserRole(instance As UserRole)
+    End Sub
+  Partial Private Sub DeleteUserRole(instance As UserRole)
+    End Sub
+  Partial Private Sub InsertUsersOnline(instance As UsersOnline)
+    End Sub
+  Partial Private Sub UpdateUsersOnline(instance As UsersOnline)
+    End Sub
+  Partial Private Sub DeleteUsersOnline(instance As UsersOnline)
+    End Sub
   #End Region
 	
 	Public Sub New()
@@ -79,6 +91,18 @@ Partial Public Class skrivbokenLinqDataContext
 	Public ReadOnly Property tblAJBarnensSkrivs() As System.Data.Linq.Table(Of tblAJBarnensSkriv)
 		Get
 			Return Me.GetTable(Of tblAJBarnensSkriv)
+		End Get
+	End Property
+	
+	Public ReadOnly Property UserRoles() As System.Data.Linq.Table(Of UserRole)
+		Get
+			Return Me.GetTable(Of UserRole)
+		End Get
+	End Property
+	
+	Public ReadOnly Property UsersOnlines() As System.Data.Linq.Table(Of UsersOnline)
+		Get
+			Return Me.GetTable(Of UsersOnline)
 		End Get
 	End Property
 	
@@ -474,6 +498,468 @@ Partial Public Class tblAJBarnensSkriv
 				Me._publish = value
 				Me.SendPropertyChanged("publish")
 				Me.OnpublishChanged
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.UserRoles")>  _
+Partial Public Class UserRole
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _UserRoleID As Integer
+	
+	Private _UserID As Integer
+	
+	Private _RoleID As Integer
+	
+	Private _ExpiryDate As System.Nullable(Of Date)
+	
+	Private _IsTrialUsed As System.Nullable(Of Boolean)
+	
+	Private _EffectiveDate As System.Nullable(Of Date)
+	
+	Private _CreatedByUserID As System.Nullable(Of Integer)
+	
+	Private _CreatedOnDate As System.Nullable(Of Date)
+	
+	Private _LastModifiedByUserID As System.Nullable(Of Integer)
+	
+	Private _LastModifiedOnDate As System.Nullable(Of Date)
+	
+	Private _Status As Integer
+	
+	Private _IsOwner As Boolean
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnUserRoleIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnUserRoleIDChanged()
+    End Sub
+    Partial Private Sub OnUserIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnUserIDChanged()
+    End Sub
+    Partial Private Sub OnRoleIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnRoleIDChanged()
+    End Sub
+    Partial Private Sub OnExpiryDateChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnExpiryDateChanged()
+    End Sub
+    Partial Private Sub OnIsTrialUsedChanging(value As System.Nullable(Of Boolean))
+    End Sub
+    Partial Private Sub OnIsTrialUsedChanged()
+    End Sub
+    Partial Private Sub OnEffectiveDateChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnEffectiveDateChanged()
+    End Sub
+    Partial Private Sub OnCreatedByUserIDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnCreatedByUserIDChanged()
+    End Sub
+    Partial Private Sub OnCreatedOnDateChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnCreatedOnDateChanged()
+    End Sub
+    Partial Private Sub OnLastModifiedByUserIDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnLastModifiedByUserIDChanged()
+    End Sub
+    Partial Private Sub OnLastModifiedOnDateChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnLastModifiedOnDateChanged()
+    End Sub
+    Partial Private Sub OnStatusChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnStatusChanged()
+    End Sub
+    Partial Private Sub OnIsOwnerChanging(value As Boolean)
+    End Sub
+    Partial Private Sub OnIsOwnerChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UserRoleID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property UserRoleID() As Integer
+		Get
+			Return Me._UserRoleID
+		End Get
+		Set
+			If ((Me._UserRoleID = value)  _
+						= false) Then
+				Me.OnUserRoleIDChanging(value)
+				Me.SendPropertyChanging
+				Me._UserRoleID = value
+				Me.SendPropertyChanged("UserRoleID")
+				Me.OnUserRoleIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UserID", DbType:="Int NOT NULL")>  _
+	Public Property UserID() As Integer
+		Get
+			Return Me._UserID
+		End Get
+		Set
+			If ((Me._UserID = value)  _
+						= false) Then
+				Me.OnUserIDChanging(value)
+				Me.SendPropertyChanging
+				Me._UserID = value
+				Me.SendPropertyChanged("UserID")
+				Me.OnUserIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_RoleID", DbType:="Int NOT NULL")>  _
+	Public Property RoleID() As Integer
+		Get
+			Return Me._RoleID
+		End Get
+		Set
+			If ((Me._RoleID = value)  _
+						= false) Then
+				Me.OnRoleIDChanging(value)
+				Me.SendPropertyChanging
+				Me._RoleID = value
+				Me.SendPropertyChanged("RoleID")
+				Me.OnRoleIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ExpiryDate", DbType:="DateTime")>  _
+	Public Property ExpiryDate() As System.Nullable(Of Date)
+		Get
+			Return Me._ExpiryDate
+		End Get
+		Set
+			If (Me._ExpiryDate.Equals(value) = false) Then
+				Me.OnExpiryDateChanging(value)
+				Me.SendPropertyChanging
+				Me._ExpiryDate = value
+				Me.SendPropertyChanged("ExpiryDate")
+				Me.OnExpiryDateChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsTrialUsed", DbType:="Bit")>  _
+	Public Property IsTrialUsed() As System.Nullable(Of Boolean)
+		Get
+			Return Me._IsTrialUsed
+		End Get
+		Set
+			If (Me._IsTrialUsed.Equals(value) = false) Then
+				Me.OnIsTrialUsedChanging(value)
+				Me.SendPropertyChanging
+				Me._IsTrialUsed = value
+				Me.SendPropertyChanged("IsTrialUsed")
+				Me.OnIsTrialUsedChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_EffectiveDate", DbType:="DateTime")>  _
+	Public Property EffectiveDate() As System.Nullable(Of Date)
+		Get
+			Return Me._EffectiveDate
+		End Get
+		Set
+			If (Me._EffectiveDate.Equals(value) = false) Then
+				Me.OnEffectiveDateChanging(value)
+				Me.SendPropertyChanging
+				Me._EffectiveDate = value
+				Me.SendPropertyChanged("EffectiveDate")
+				Me.OnEffectiveDateChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CreatedByUserID", DbType:="Int")>  _
+	Public Property CreatedByUserID() As System.Nullable(Of Integer)
+		Get
+			Return Me._CreatedByUserID
+		End Get
+		Set
+			If (Me._CreatedByUserID.Equals(value) = false) Then
+				Me.OnCreatedByUserIDChanging(value)
+				Me.SendPropertyChanging
+				Me._CreatedByUserID = value
+				Me.SendPropertyChanged("CreatedByUserID")
+				Me.OnCreatedByUserIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CreatedOnDate", DbType:="DateTime")>  _
+	Public Property CreatedOnDate() As System.Nullable(Of Date)
+		Get
+			Return Me._CreatedOnDate
+		End Get
+		Set
+			If (Me._CreatedOnDate.Equals(value) = false) Then
+				Me.OnCreatedOnDateChanging(value)
+				Me.SendPropertyChanging
+				Me._CreatedOnDate = value
+				Me.SendPropertyChanged("CreatedOnDate")
+				Me.OnCreatedOnDateChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LastModifiedByUserID", DbType:="Int")>  _
+	Public Property LastModifiedByUserID() As System.Nullable(Of Integer)
+		Get
+			Return Me._LastModifiedByUserID
+		End Get
+		Set
+			If (Me._LastModifiedByUserID.Equals(value) = false) Then
+				Me.OnLastModifiedByUserIDChanging(value)
+				Me.SendPropertyChanging
+				Me._LastModifiedByUserID = value
+				Me.SendPropertyChanged("LastModifiedByUserID")
+				Me.OnLastModifiedByUserIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LastModifiedOnDate", DbType:="DateTime")>  _
+	Public Property LastModifiedOnDate() As System.Nullable(Of Date)
+		Get
+			Return Me._LastModifiedOnDate
+		End Get
+		Set
+			If (Me._LastModifiedOnDate.Equals(value) = false) Then
+				Me.OnLastModifiedOnDateChanging(value)
+				Me.SendPropertyChanging
+				Me._LastModifiedOnDate = value
+				Me.SendPropertyChanged("LastModifiedOnDate")
+				Me.OnLastModifiedOnDateChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Status", DbType:="Int NOT NULL")>  _
+	Public Property Status() As Integer
+		Get
+			Return Me._Status
+		End Get
+		Set
+			If ((Me._Status = value)  _
+						= false) Then
+				Me.OnStatusChanging(value)
+				Me.SendPropertyChanging
+				Me._Status = value
+				Me.SendPropertyChanged("Status")
+				Me.OnStatusChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IsOwner", DbType:="Bit NOT NULL")>  _
+	Public Property IsOwner() As Boolean
+		Get
+			Return Me._IsOwner
+		End Get
+		Set
+			If ((Me._IsOwner = value)  _
+						= false) Then
+				Me.OnIsOwnerChanging(value)
+				Me.SendPropertyChanging
+				Me._IsOwner = value
+				Me.SendPropertyChanged("IsOwner")
+				Me.OnIsOwnerChanged
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.UsersOnline")>  _
+Partial Public Class UsersOnline
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _UserID As Integer
+	
+	Private _PortalID As Integer
+	
+	Private _TabID As Integer
+	
+	Private _CreationDate As Date
+	
+	Private _LastActiveDate As Date
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnUserIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnUserIDChanged()
+    End Sub
+    Partial Private Sub OnPortalIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnPortalIDChanged()
+    End Sub
+    Partial Private Sub OnTabIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnTabIDChanged()
+    End Sub
+    Partial Private Sub OnCreationDateChanging(value As Date)
+    End Sub
+    Partial Private Sub OnCreationDateChanged()
+    End Sub
+    Partial Private Sub OnLastActiveDateChanging(value As Date)
+    End Sub
+    Partial Private Sub OnLastActiveDateChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UserID", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
+	Public Property UserID() As Integer
+		Get
+			Return Me._UserID
+		End Get
+		Set
+			If ((Me._UserID = value)  _
+						= false) Then
+				Me.OnUserIDChanging(value)
+				Me.SendPropertyChanging
+				Me._UserID = value
+				Me.SendPropertyChanged("UserID")
+				Me.OnUserIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PortalID", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
+	Public Property PortalID() As Integer
+		Get
+			Return Me._PortalID
+		End Get
+		Set
+			If ((Me._PortalID = value)  _
+						= false) Then
+				Me.OnPortalIDChanging(value)
+				Me.SendPropertyChanging
+				Me._PortalID = value
+				Me.SendPropertyChanged("PortalID")
+				Me.OnPortalIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_TabID", DbType:="Int NOT NULL")>  _
+	Public Property TabID() As Integer
+		Get
+			Return Me._TabID
+		End Get
+		Set
+			If ((Me._TabID = value)  _
+						= false) Then
+				Me.OnTabIDChanging(value)
+				Me.SendPropertyChanging
+				Me._TabID = value
+				Me.SendPropertyChanged("TabID")
+				Me.OnTabIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CreationDate", DbType:="DateTime NOT NULL")>  _
+	Public Property CreationDate() As Date
+		Get
+			Return Me._CreationDate
+		End Get
+		Set
+			If ((Me._CreationDate = value)  _
+						= false) Then
+				Me.OnCreationDateChanging(value)
+				Me.SendPropertyChanging
+				Me._CreationDate = value
+				Me.SendPropertyChanged("CreationDate")
+				Me.OnCreationDateChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LastActiveDate", DbType:="DateTime NOT NULL")>  _
+	Public Property LastActiveDate() As Date
+		Get
+			Return Me._LastActiveDate
+		End Get
+		Set
+			If ((Me._LastActiveDate = value)  _
+						= false) Then
+				Me.OnLastActiveDateChanging(value)
+				Me.SendPropertyChanging
+				Me._LastActiveDate = value
+				Me.SendPropertyChanged("LastActiveDate")
+				Me.OnLastActiveDateChanged
 			End If
 		End Set
 	End Property

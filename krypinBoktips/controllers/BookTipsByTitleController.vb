@@ -1,9 +1,9 @@
 ﻿Imports System.Text
+
 Public Class BookTipsByTitleController
 
     Private _dalObj As New boktipsTitleDAL
     Private _combiner As New boktipsImgSrcCombiner
-
 
     Public Function boktipsByTitle(title As String) As List(Of boktipsInfo)
 
@@ -21,7 +21,7 @@ Public Class BookTipsByTitleController
     End Function
 
     Public Function basicTitleList() As String
-        Dim sb As New stringBuilder
+        Dim sb As New StringBuilder
         Dim dallist As List(Of boktipsInfo) = _dalObj.boktipsTitelList()
 
         For Each itm In dallist

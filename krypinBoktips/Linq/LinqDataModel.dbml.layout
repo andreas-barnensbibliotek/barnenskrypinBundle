@@ -8,10 +8,10 @@
         <elementListCompartment Id="f44412d2-580e-428a-93d8-091f156378f6" absoluteBounds="1.3899999999999997, 1.71, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="1dbf2984-f583-451f-b0a3-5a88a3775e19" absoluteBounds="4.125, 1.25, 2, 6.3861311848958326">
+    <classShape Id="7c406da4-091c-4cd9-906f-07aeca589657" absoluteBounds="4.5, 0.75, 2, 6.5784326171875">
       <DataClassMoniker Name="/LinqDataModelDataContext/tblAjKatalogBook" />
       <nestedChildShapes>
-        <elementListCompartment Id="d977bdfc-5536-4fa2-96b0-20ef15e51ec2" absoluteBounds="4.1400000000000006, 1.71, 1.9700000000000002, 5.826131184895833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="c6f6d847-3842-4e91-908e-2b5afc030a03" absoluteBounds="4.515, 1.21, 1.9700000000000002, 6.0184326171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

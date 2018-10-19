@@ -1,0 +1,13 @@
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\obj\Debug\KrypinSettings.Resources.resources
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\obj\Debug\KrypinSettings.vbproj.GenerateResource.Cache
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\bin\Debug\KrypinSettings.dll.config
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\bin\Debug\KrypinSettings.dll
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\bin\Debug\KrypinSettings.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\bin\Debug\KrypinSettings.xml
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\obj\Debug\KrypinSettings.dll
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\obj\Debug\KrypinSettings.xml
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\obj\Debug\KrypinSettings.pdb
+D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\KrypinSettings.dll.config
+D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\KrypinSettings.dll
+D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\KrypinSettings.pdb
+D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\KrypinSettings.xml

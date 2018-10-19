@@ -1,0 +1,10 @@
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\bin\Release\KrypinSettings.dll.config
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\bin\Release\KrypinSettings.dll
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\bin\Release\KrypinSettings.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\bin\Release\KrypinSettings.xml
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\obj\Release\KrypinSettings.Resources.resources
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\obj\Release\KrypinSettings.vbproj.GenerateResource.Cache
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\obj\Release\KrypinSettings.dll
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\obj\Release\KrypinSettings.xml
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\obj\Release\KrypinSettings.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\obj\Release\KrypinSettings.vbprojResolveAssemblyReference.cache

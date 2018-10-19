@@ -1,0 +1,13 @@
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\obj\Debug\KrypinSettingsTEST.vbprojResolveAssemblyReference.cache
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\obj\Debug\KrypinSettingsTEST.Resources.resources
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\obj\Debug\KrypinSettingsTEST.vbproj.GenerateResource.Cache
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\bin\Debug\KrypinSettingsTEST.dll
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\bin\Debug\KrypinSettingsTEST.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\bin\Debug\KrypinSettingsTEST.xml
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\bin\Debug\KrypinSettings.dll
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\bin\Debug\KrypinSettings.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\bin\Debug\KrypinSettings.xml
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\obj\Debug\KrypinSettingsTEST.dll
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\obj\Debug\KrypinSettingsTEST.xml
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\obj\Debug\KrypinSettingsTEST.pdb

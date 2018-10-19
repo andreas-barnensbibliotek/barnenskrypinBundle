@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AJDNNDatabase_v5" Class="KrypinCreateLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=AJDNNDatabase_v5;User ID=forfAdmin2" SettingsObjectName="barnenskrypinCreateKrypinLibrary.My.MySettings" SettingsPropertyName="AJDNNDatabase_v5ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblAJKrypinUserData" Member="tblAJKrypinUserDatas">
+    <Type Name="tblAJKrypinUserData">
+      <Column Name="KrypID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Presentation" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="BBUserMess" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Avatar" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ValdUserCss" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KrypinBehorighet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LaserJustnu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Visits" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MeVisits" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShowMess" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblAjKrypinUserSettings" Member="tblAjKrypinUserSettings">
+    <Type Name="tblAjKrypinUserSetting">
+      <Column Name="settingID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="settingTypID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="settingValue" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.AjKrypinExists" Method="AjKrypinExists">
+    <Parameter Name="userid" Type="System.Int32" DbType="Int" />
+    <ElementType Name="AjKrypinExistsResult">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Expr1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

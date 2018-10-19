@@ -69,9 +69,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="bibbloMoneyMainController.vb" />
+    <Compile Include="Controllers\bokmarkelserController.vb" />
     <Compile Include="Controllers\transaktionController.vb" />
     <Compile Include="Dal\bibblomoneyTransactionDAL.vb" />
+    <Compile Include="Dal\bokmarkelserDal.vb" />
     <Compile Include="Dal\connectionstringHandler.vb" />
+    <Compile Include="info\bankSaldoInfo.vb" />
+    <Compile Include="info\bokmarkelseItemInfo.vb" />
+    <Compile Include="info\bokmarkelserAwardsInfo.vb" />
+    <Compile Include="info\bokmarkelserReturnInfo.vb" />
     <Compile Include="info\transactionInfo.vb" />
     <Compile Include="Linq\bibblomoneyLinq.designer.vb">
       <AutoGen>True</AutoGen>

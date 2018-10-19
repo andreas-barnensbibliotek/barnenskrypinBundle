@@ -2,7 +2,7 @@
 
 #Region "DATA LINQ SETUP"
     Private connectionObj As New connectionstringHandler
-    Private _linqObj As New bokmarkelserLinqDataContext(connectionObj.CurrentConnectionString)
+    Private _linqObj As New bibblomoneyLinqDataContext(connectionObj.CurrentConnectionString)
 #End Region
     Public Function checkifUserhasAwardTyp(usrid As Integer, awardgroup As Integer) As Boolean
         Dim ret As Boolean = False
@@ -80,6 +80,7 @@
             tmp.UserLevel = t.Levels
             tmp.Occures = t.Occurs
             tmp.AwardGroup = t.Awardgroup
+            tmp.TolevelUp = t.tolevelup
             tmp.EarnFuncID = t.BibblimoneyEarnID
 
             retobj.Add(tmp)
@@ -89,29 +90,24 @@
 
     End Function
 
-    Public Function getvaldUserAwards(usrid As Integer, awardid As Integer) As List(Of bokmarkelserAwardsInfo)
+    Public Function getvaldUserAwards(usrid As Integer, awardid As Integer) As bokmarkelserAwardsInfo
 
-        Dim retobj As New List(Of bokmarkelserAwardsInfo)
+        Dim t = (From x In _linqObj.ajbokmarkelser(2, usrid, awardid)).First()
 
-        Dim bl = From t In _linqobj.ajbokmarkelser(2, usrid, awardid)
+        Dim tmp As New bokmarkelserAwardsInfo
+        tmp.Awardid = t.Aid
+        tmp.AwardName = t.Awardname
+        tmp.Userid = t.Userid
+        tmp.Badgesrc = t.Badgesrc
+        tmp.Beskrivning = t.Beskrivning
+        tmp.Counter = t.Counters
+        tmp.UserLevel = t.Levels
+        tmp.Occures = t.Occurs
+        tmp.AwardGroup = t.Awardgroup
+        tmp.TolevelUp = t.tolevelup
+        tmp.EarnFuncID = t.BibblimoneyEarnID
 
-        For Each t In bl
-            Dim tmp As New bokmarkelserAwardsInfo
-            tmp.Awardid = t.Aid
-            tmp.AwardName = t.Awardname
-            tmp.Userid = t.Userid
-            tmp.Badgesrc = t.Badgesrc
-            tmp.Beskrivning = t.Beskrivning
-            tmp.Counter = t.Counters
-            tmp.UserLevel = t.Levels
-            tmp.Occures = t.Occurs
-            tmp.AwardGroup = t.Awardgroup
-            tmp.EarnFuncID = t.BibblimoneyEarnID
-
-            retobj.Add(tmp)
-        Next
-
-        Return retobj
+        Return tmp
 
     End Function
 
@@ -119,7 +115,7 @@
 
         Dim ret As Boolean = False
 
-        Dim bl = (From t In _linqobj.tblAjBokmarkelserPointCounters
+        Dim bl = (From t In _linqObj.tblAjBokmarkelserPointCounters
                   Where t.Userid = userid And t.Aid = awardgroup
                   Select t).First()
         Try
@@ -262,14 +258,29 @@
 
     Public Function awardNameToAwardId(awardgroupname As String) As Integer
         Dim ret As Integer = 0
+        Try
+            Dim bl = (From t In _linqObj.tblAjBokmarkelseGruppers
+                      Where t.AwardGroup = awardgroupname
+                      Select t).First()
 
-        Dim bl = (From t In _linqobj.tblAjBokmarkelseGruppers
-                  Where t.AwardGroup = awardgroupname
-                  Select t).First()
+            ret = bl.AwardGroupID
+            Return ret
+        Catch ex As Exception
+            Return 0
+        End Try
+    End Function
 
-        ret = bl.AwardGroupID
+    Public Function getEarnIDbyAwardgroupID(awardgroupid As Integer) As Integer
+        Dim ret As Integer = 0
+        Try
+            Dim bl = (From t In _linqObj.tblAjBokmarkelseGruppers
+                      Where t.AwardGroupID = awardgroupid
+                      Select t).First()
 
-        Return ret
+            Return bl.PointEarned
+        Catch ex As Exception
+            Return 0
+        End Try
 
     End Function
 End Class

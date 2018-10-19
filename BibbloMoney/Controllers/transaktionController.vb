@@ -40,4 +40,23 @@ Public Class transaktionController
     Private Sub addLog(transobj As transactionInfo)
         _Dal.BM_AddToLog(transobj)
     End Sub
+
+#Region "användarens banksaldo"
+
+    Public Function usersaldo(userid As Integer, Optional typ As String = "standard") As bankSaldoInfo
+        Dim retobj As New bankSaldoInfo
+
+        If typ = "standard" Then
+            retobj = _Dal.BMGetUserSaldoFromBANK(userid)
+        Else
+            If typ = "standard" Then
+                retobj = _Dal.BMGetUserSaldoFromBANK(userid)
+
+            End If
+        End If
+
+        Return retobj
+    End Function
+
+#End Region
 End Class

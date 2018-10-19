@@ -3,7 +3,7 @@
     Public Sub New()
         _earnfuncid = 0
         _userid = 0
-        _userid = 0
+        _amount = 0
         _bonus = 0
     End Sub
 

@@ -1,0 +1,16 @@
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\bin\Release\krypinBoklistorTEST.dll
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\bin\Release\krypinBoklistorTEST.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\bin\Release\krypinBoklistorTEST.xml
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\bin\Release\krypinBoklistor.dll
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\bin\Release\barnenskrypinIMGHandler.dll
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\bin\Release\krypinBoklistor.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\bin\Release\krypinBoklistor.xml
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\bin\Release\barnenskrypinIMGHandler.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\bin\Release\barnenskrypinIMGHandler.xml
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\obj\Release\krypinBoklistorTEST.vbprojResolveAssemblyReference.cache
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\obj\Release\krypinBoklistorTEST.Resources.resources
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\obj\Release\krypinBoklistorTEST.vbproj.GenerateResource.Cache
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\obj\Release\krypinBoklistorTEST.dll
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\obj\Release\krypinBoklistorTEST.xml
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\obj\Release\krypinBoklistorTEST.pdb

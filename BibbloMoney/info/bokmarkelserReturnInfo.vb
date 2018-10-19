@@ -1,10 +1,15 @@
 ﻿Public Class bokmarkelserReturnInfo
-    Private _bokmarkelser As List(Of bokmarkelseItemInfo)
-    Public Property Bokmarkelser() As List(Of bokmarkelseItemInfo)
+    Public Sub New()
+        _bokmarkelser = New List(Of bokmarkelserAwardsInfo)
+        _userid = 0
+        _status = ""
+    End Sub
+    Private _bokmarkelser As List(Of bokmarkelserAwardsInfo)
+    Public Property Bokmarkelser() As List(Of bokmarkelserAwardsInfo)
         Get
             Return _bokmarkelser
         End Get
-        Set(ByVal value As List(Of bokmarkelseItemInfo))
+        Set(ByVal value As List(Of bokmarkelserAwardsInfo))
             _bokmarkelser = value
         End Set
     End Property

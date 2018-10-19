@@ -1,0 +1,13 @@
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\bin\Release\krypinBoklistor.dll.config
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\bin\Release\krypinBoklistor.dll
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\bin\Release\krypinBoklistor.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\bin\Release\krypinBoklistor.xml
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\bin\Release\barnenskrypinIMGHandler.dll
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\bin\Release\barnenskrypinIMGHandler.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\bin\Release\barnenskrypinIMGHandler.xml
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\obj\Release\krypinBoklistor.vbprojResolveAssemblyReference.cache
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\obj\Release\krypinBoklistor.Resources.resources
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\obj\Release\krypinBoklistor.vbproj.GenerateResource.Cache
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\obj\Release\krypinBoklistor.dll
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\obj\Release\krypinBoklistor.xml
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\obj\Release\krypinBoklistor.pdb

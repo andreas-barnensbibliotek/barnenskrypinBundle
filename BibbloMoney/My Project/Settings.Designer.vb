@@ -75,6 +75,16 @@ Namespace My
                 Return CType(Me("DatabaseConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=.\SQLEXPRESS;Initial Catalog=AJDNNDatabase_v5;User ID=forfAdmin2")>  _
+        Public ReadOnly Property AJDNNDatabase_v5ConnectionString1() As String
+            Get
+                Return CType(Me("AJDNNDatabase_v5ConnectionString1"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

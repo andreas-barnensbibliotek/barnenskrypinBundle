@@ -2,9 +2,10 @@ D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\bin\Release\krypinS
 D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\bin\Release\krypinSkrivboken.dll
 D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\bin\Release\krypinSkrivboken.pdb
 D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\bin\Release\krypinSkrivboken.xml
-D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\obj\Release\krypinSkrivboken.vbprojResolveAssemblyReference.cache
 D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\obj\Release\krypinSkrivboken.Resources.resources
 D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\obj\Release\krypinSkrivboken.vbproj.GenerateResource.Cache
 D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\obj\Release\krypinSkrivboken.dll
 D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\obj\Release\krypinSkrivboken.xml
 D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\obj\Release\krypinSkrivboken.pdb
+d:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\obj\Release\krypinSkrivboken.vbprojAssemblyReference.cache
+d:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\obj\Release\krypinSkrivboken.vbproj.CoreCompileInputs.cache

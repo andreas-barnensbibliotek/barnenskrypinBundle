@@ -7,4 +7,5 @@ D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\obj\Release\KrypinSet
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\obj\Release\KrypinSettings.dll
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\obj\Release\KrypinSettings.xml
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\obj\Release\KrypinSettings.pdb
-D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\obj\Release\KrypinSettings.vbprojResolveAssemblyReference.cache
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\obj\Release\KrypinSettings.vbproj.CoreCompileInputs.cache
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\obj\Release\KrypinSettings.vbprojAssemblyReference.cache

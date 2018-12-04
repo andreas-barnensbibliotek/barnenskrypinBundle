@@ -9,4 +9,12 @@
         Return _combiner.BoktipsImgSrcCombiner(tmplist)
 
     End Function
+
+    Public Function getbooktipLatestByUserid(userid As Integer) As List(Of boktipsInfo)
+        Dim retobj As New boktipsInfo
+        Dim tmplist As List(Of boktipsInfo) = _dalobj.getLatestBokTipsByUserid(userid)
+
+        Return _combiner.BoktipsImgSrcCombiner(tmplist)
+
+    End Function
 End Class

@@ -13,12 +13,24 @@
 
         retobj.Userid = userid
         retobj.Displaynamn = itm.DisplayName
+        retobj.LaserJustNu = getlaserjustnuSetting(userid)
         retobj.SettingsList = getsettingsdetailList(userid)
 
         Return retobj
 
     End Function
+    Public Function getLaserjustnu(userid As Integer) As ListUserSettingsInfo
+        Dim retobj As New ListUserSettingsInfo
 
+        Dim itm = (From i In _linqObj.AjKrypinGetUserKrypin(userid)).FirstOrDefault()
+
+        retobj.Userid = userid
+        retobj.Displaynamn = itm.DisplayName
+        retobj.LaserJustNu = getlaserjustnuSetting(userid)
+
+        Return retobj
+
+    End Function
     Public Function getsettingsdetailList(userid As Integer) As List(Of KrypinSettingInfo)
         Dim obj As New List(Of KrypinSettingInfo)
         Dim items = From i In _linqObj.tblAjKrypinUserSettings
@@ -192,6 +204,15 @@
         Catch ex As Exception
             Return retobj
         End Try
+    End Function
+
+    Private Function getlaserjustnuSetting(userid As Integer) As Integer
+        Dim itm = (From e In _linqObj.tblAjKrypinUserSettings
+                   Where e.userid = userid And e.settingTypID = 3
+                   Select e).FirstOrDefault()
+
+        Return itm.settingValue
+
     End Function
 
 

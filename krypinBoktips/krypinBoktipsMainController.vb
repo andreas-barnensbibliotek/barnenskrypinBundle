@@ -169,7 +169,24 @@
             retobj.Boktips = booktiplist
             retobj.Status = "Boktips by userid completed"
         Catch ex As Exception
-            retobj.Status = "ERROR booktipByTipId"
+            retobj.Status = "ERROR booktipByUserId"
+
+        End Try
+
+        Return retobj
+
+    End Function
+    Public Function booktipLatestByUserId(userid As Integer) As krypinBoktipsInfo
+        Dim retobj As New krypinBoktipsInfo
+        Dim booktiplist As New List(Of boktipsInfo)
+        Dim obj As New BookTipsByUserIdController
+
+        Try
+            booktiplist = obj.getbooktipLatestByUserid(userid)
+            retobj.Boktips = booktiplist
+            retobj.Status = "Latest boktips by userid completed"
+        Catch ex As Exception
+            retobj.Status = "ERROR booktipLatestByUserId"
 
         End Try
 

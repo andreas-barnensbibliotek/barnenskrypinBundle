@@ -414,5 +414,12 @@ Public Class krypinBooklistDAL
 
 
 #End Region
+    Public Function getlaserjustnuSetting(userid As Integer) As Integer
+        Dim itm = (From e In _linqobj.tblAjKrypinUserSettings
+                   Where e.userid = userid And e.settingTypID = 3
+                   Select e).FirstOrDefault()
 
+        Return itm.settingValue
+
+    End Function
 End Class

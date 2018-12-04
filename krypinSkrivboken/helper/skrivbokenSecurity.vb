@@ -63,7 +63,8 @@
 
     End Function
     Public Function isuserloggedIn(userid As Integer) As Boolean
-        Dim ret As Boolean = False
+        'OBS ALLWAYS TRUE
+        Dim ret As Boolean = True
         If _dalobj.isUserOnline(userid) Then
             ret = True
         End If

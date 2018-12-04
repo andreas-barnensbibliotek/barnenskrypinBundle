@@ -5,9 +5,12 @@ D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\krypinSkrivbokenTes
 D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\krypinSkrivbokenTest\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\krypinSkrivbokenTest\bin\Release\krypinSkrivboken.pdb
 D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\krypinSkrivbokenTest\bin\Release\krypinSkrivboken.xml
-D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\krypinSkrivbokenTest\obj\Release\krypinSkrivbokenTest.vbprojResolveAssemblyReference.cache
 D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\krypinSkrivbokenTest\obj\Release\krypinSkrivbokenTest.Resources.resources
 D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\krypinSkrivbokenTest\obj\Release\krypinSkrivbokenTest.vbproj.GenerateResource.Cache
 D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\krypinSkrivbokenTest\obj\Release\krypinSkrivbokenTest.dll
 D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\krypinSkrivbokenTest\obj\Release\krypinSkrivbokenTest.xml
 D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\krypinSkrivbokenTest\obj\Release\krypinSkrivbokenTest.pdb
+d:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\krypinSkrivbokenTest\bin\Release\krypinSkrivboken.dll.config
+d:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\krypinSkrivbokenTest\obj\Release\krypinSkrivbokenTest.vbprojAssemblyReference.cache
+d:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\krypinSkrivbokenTest\obj\Release\krypinSkrivbokenTest.vbproj.CoreCompileInputs.cache
+d:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\krypinSkrivbokenTest\obj\Release\krypinSkrivbokenTest.vbproj.CopyComplete

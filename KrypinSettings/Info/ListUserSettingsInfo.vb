@@ -24,7 +24,24 @@
             _displaynamn = value
         End Set
     End Property
-
+    Private _laserjustnu As String
+    Public Property LaserJustNu() As String
+        Get
+            Return _laserjustnu
+        End Get
+        Set(ByVal value As String)
+            _laserjustnu = value
+        End Set
+    End Property
+    Private _laserjustnuSrc As String
+    Public Property LaserJustNuSrc() As String
+        Get
+            Return _laserjustnuSrc
+        End Get
+        Set(ByVal value As String)
+            _laserjustnuSrc = value
+        End Set
+    End Property
     Private _settingsList As List(Of KrypinSettingInfo)
     Public Property SettingsList() As List(Of KrypinSettingInfo)
         Get

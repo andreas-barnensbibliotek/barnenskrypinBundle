@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database" Class="krypinBooklistLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="krypinBoklistor.My.MySettings" SettingsPropertyName="DatabaseConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AJDNNDatabase_v5" Class="krypinBooklistLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=AJDNNDatabase_v5;User ID=forfAdmin4" SettingsObjectName="krypinBoklistor.My.MySettings" SettingsPropertyName="AJDNNDatabase_v5ConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.tblAJBookListItem" Member="tblAJBookListItems">
     <Type Name="tblAJBookListItem">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -22,6 +22,14 @@
       <Column Name="Dela" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Datum" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="gruppid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblAjKrypinUserSettings" Member="tblAjKrypinUserSettings">
+    <Type Name="tblAjKrypinUserSetting">
+      <Column Name="settingID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="settingTypID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="settingValue" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
     </Type>
   </Table>
   <Function Name="dbo.AjBooklistExtended" Method="AjBooklistExtended">

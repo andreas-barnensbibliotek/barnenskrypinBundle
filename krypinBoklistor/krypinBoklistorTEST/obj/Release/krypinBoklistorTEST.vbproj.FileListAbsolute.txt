@@ -8,9 +8,12 @@ D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\bin\Release\krypinBoklistor.xml
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\bin\Release\barnenskrypinIMGHandler.pdb
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\bin\Release\barnenskrypinIMGHandler.xml
-D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\obj\Release\krypinBoklistorTEST.vbprojResolveAssemblyReference.cache
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\obj\Release\krypinBoklistorTEST.Resources.resources
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\obj\Release\krypinBoklistorTEST.vbproj.GenerateResource.Cache
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\obj\Release\krypinBoklistorTEST.dll
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\obj\Release\krypinBoklistorTEST.xml
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\obj\Release\krypinBoklistorTEST.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\bin\Release\krypinBoklistor.dll.config
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\obj\Release\krypinBoklistorTEST.vbprojAssemblyReference.cache
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\obj\Release\krypinBoklistorTEST.vbproj.CoreCompileInputs.cache
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\obj\Release\krypinBoklistorTEST.vbproj.CopyComplete

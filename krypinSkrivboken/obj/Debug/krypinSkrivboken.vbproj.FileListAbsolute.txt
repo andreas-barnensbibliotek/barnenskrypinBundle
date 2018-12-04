@@ -7,4 +7,5 @@ D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\obj\Debug\krypinSkr
 D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\obj\Debug\krypinSkrivboken.dll
 D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\obj\Debug\krypinSkrivboken.xml
 D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\obj\Debug\krypinSkrivboken.pdb
-D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\obj\Debug\krypinSkrivboken.vbprojResolveAssemblyReference.cache
+D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\obj\Debug\krypinSkrivboken.vbproj.CoreCompileInputs.cache
+D:\devprojekt\libraries\barnenskrypinBundle\krypinSkrivboken\obj\Debug\krypinSkrivboken.vbprojAssemblyReference.cache

@@ -7,4 +7,4 @@ D:\devprojekt\libraries\barnenskrypinBundle\krypinBoktips\obj\Release\krypinBokt
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoktips\obj\Release\krypinBoktips.dll
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoktips\obj\Release\krypinBoktips.xml
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoktips\obj\Release\krypinBoktips.pdb
-D:\devprojekt\libraries\barnenskrypinBundle\krypinBoktips\obj\Release\krypinBoktips.vbprojResolveAssemblyReference.cache
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoktips\obj\Release\krypinBoktips.vbproj.CoreCompileInputs.cache

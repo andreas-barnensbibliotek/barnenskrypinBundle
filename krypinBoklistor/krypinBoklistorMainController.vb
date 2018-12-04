@@ -5,7 +5,7 @@
     Public Function getAllUserBooklists(userid As Integer) As krypinBookListInfo
         Dim ret As New krypinBookListInfo
         If userid > 0 Then
-            ret.Booklists = getandcombineBooklistAnditem(userid)
+            ret.Booklists = addLaserjustnu(userid, getandcombineBooklistAnditem(userid))
         Else
             ret.Status = "Det saknas uppgifter"
         End If
@@ -29,7 +29,7 @@
     Public Function getUserValdBooklists(userid As Integer, blid As Integer) As krypinBookListInfo
         Dim ret As New krypinBookListInfo
         If userid > 0 And blid > 0 Then
-            ret.Booklists = getandcombineValdBooklistAnditem(userid, blid)
+            ret.Booklists = addLaserjustnu(userid, getandcombineValdBooklistAnditem(userid, blid))
 
         Else
             ret.Status = "Det saknas uppgifter"
@@ -46,7 +46,7 @@
             lbobj.Userid = userid
             lbobj.gruppid = 0
 
-            ret.Booklists = getandcombineValdBooklistAnditem(userid, _dal.addNyBooklist(lbobj))
+            ret.Booklists = addLaserjustnu(userid, getandcombineValdBooklistAnditem(userid, _dal.addNyBooklist(lbobj)))
 
         Else
             ret.Status = "Det saknas uppgifter"
@@ -93,7 +93,7 @@
                         _dal.addBookItemToMyBooks(userid, bookid)
                     End If
 
-                    ret.Booklists = getandcombineValdBooklistAnditem(userid, blid)
+                    ret.Booklists = addLaserjustnu(userid, getandcombineValdBooklistAnditem(userid, blid))
                 Else
                     ret.Status = "Error"
                 End If
@@ -113,7 +113,7 @@
 
             _dal.EditBooklistname(blid, blnamn)
 
-            ret.Booklists = getandcombineValdBooklistAnditem(userid, blid)
+            ret.Booklists = addLaserjustnu(userid, getandcombineValdBooklistAnditem(userid, blid))
 
         Else
             ret.Status = "Det saknas uppgifter"
@@ -265,5 +265,21 @@
     End Function
 
 #End Region
+    Private Function addLaserjustnu(userid As Integer, boklistan As List(Of krypinbooklisInfo)) As List(Of krypinbooklisInfo)
+        Dim valdjustnubookid = _dal.getlaserjustnuSetting(userid)
 
+        If valdjustnubookid > 0 Then
+            For Each item In boklistan
+                For Each x In item.BooklistItems
+                    If valdjustnubookid = x.Bookid Then
+                        x.Lasernu = True
+                        Exit For
+                    End If
+                Next
+            Next
+        End If
+
+        Return boklistan
+
+    End Function
 End Class

@@ -1,4 +1,3 @@
-D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\obj\Debug\krypinBoklistorTEST.vbprojResolveAssemblyReference.cache
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\obj\Debug\krypinBoklistorTEST.Resources.resources
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\obj\Debug\krypinBoklistorTEST.vbproj.GenerateResource.Cache
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\bin\Debug\krypinBoklistorTEST.dll
@@ -14,3 +13,7 @@ D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\bin\Debug\barnenskrypinIMGHandler.dll
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\bin\Debug\barnenskrypinIMGHandler.pdb
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\bin\Debug\barnenskrypinIMGHandler.xml
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\bin\Debug\krypinBoklistor.dll.config
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\obj\Debug\krypinBoklistorTEST.vbprojAssemblyReference.cache
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\obj\Debug\krypinBoklistorTEST.vbproj.CoreCompileInputs.cache
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\krypinBoklistorTEST\obj\Debug\krypinBoklistorTEST.vbproj.CopyComplete

@@ -20,6 +20,21 @@ Imports KrypinSettings
         TESTobj = retobj
 
     End Sub
+    <TestMethod()> Public Sub getuserlaserjustnuTEST()
+        Dim retobj As New ListUserSettingsInfo
+        Dim TESTobj As New ListUserSettingsInfo
+        Dim cmdobj As New CmdSettingsInfo
+        cmdobj.Userid = 7017
+        cmdobj.SettingCmdtyp = "getlasernu"
+        cmdobj.SettingsIdValue = 0
+        cmdobj.SettingValue = "0"
+
+        retobj = _obj.KrypinSettings(cmdobj)
+
+        TESTobj = retobj
+
+    End Sub
+
     <TestMethod()> Public Sub setAvatarsettingTEST()
         Dim retobj As New ListUserSettingsInfo
         Dim TESTobj As New ListUserSettingsInfo

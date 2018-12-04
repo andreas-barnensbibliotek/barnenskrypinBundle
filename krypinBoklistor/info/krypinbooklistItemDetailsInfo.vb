@@ -8,6 +8,7 @@ Public Class krypinbooklistItemDetailsInfo
     Private _isbn As String = ""
     Private _forfattare As String = ""
     Private _imageurl As String = ""
+    Private _lasernu As Boolean = False
 
     Public Property Bookid() As Integer
         Get
@@ -50,6 +51,16 @@ Public Class krypinbooklistItemDetailsInfo
         End Get
         Set(ByVal value As String)
             _forfattare = value
+        End Set
+    End Property
+
+
+    Public Property Lasernu() As Boolean
+        Get
+            Return _lasernu
+        End Get
+        Set(ByVal value As Boolean)
+            _lasernu = value
         End Set
     End Property
 

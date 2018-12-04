@@ -6,9 +6,10 @@
         Select Case cmdtyp.SettingCmdtyp.ToLower
             Case "get"
                 retobj = handlerobj.getusersettings(cmdtyp)
-
-            'Case "updaterasettings"
-            '    retobj.Status = "uppdaterade: " & handlerobj.updaterasettings()
+            Case "getlasernu"
+                retobj = handlerobj.getuserlasernu(cmdtyp)
+            Case "updaterasettings" ' används endast för att uppdatera alla krypin 
+                retobj.Status = "uppdaterade: " & handlerobj.updaterasettings()
 
             Case "settings"
                 If cmdtyp.Userid > 0 And cmdtyp.SettingsIdValue > 0 And Not String.IsNullOrEmpty(cmdtyp.SettingValue) Then

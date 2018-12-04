@@ -1,4 +1,3 @@
-D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinCreateKrypinLibrary\obj\Debug\barnenskrypinCreateKrypinLibrary.vbprojResolveAssemblyReference.cache
 D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinCreateKrypinLibrary\obj\Debug\barnenskrypinCreateKrypinLibrary.Resources.resources
 D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinCreateKrypinLibrary\obj\Debug\barnenskrypinCreateKrypinLibrary.vbproj.GenerateResource.Cache
 D:\wwwroot\dotnetnuke_v5\bin\barnenskrypinCreateKrypinLibrary.dll.config
@@ -8,3 +7,5 @@ D:\wwwroot\dotnetnuke_v5\bin\barnenskrypinCreateKrypinLibrary.xml
 D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinCreateKrypinLibrary\obj\Debug\barnenskrypinCreateKrypinLibrary.dll
 D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinCreateKrypinLibrary\obj\Debug\barnenskrypinCreateKrypinLibrary.xml
 D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinCreateKrypinLibrary\obj\Debug\barnenskrypinCreateKrypinLibrary.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinCreateKrypinLibrary\obj\Debug\barnenskrypinCreateKrypinLibrary.vbproj.CoreCompileInputs.cache
+D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinCreateKrypinLibrary\obj\Debug\barnenskrypinCreateKrypinLibrary.vbprojAssemblyReference.cache

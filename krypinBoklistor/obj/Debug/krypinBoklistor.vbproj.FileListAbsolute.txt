@@ -1,4 +1,3 @@
-D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\obj\Debug\krypinBoklistor.vbprojResolveAssemblyReference.cache
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\obj\Debug\krypinBoklistor.Resources.resources
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\obj\Debug\krypinBoklistor.vbproj.GenerateResource.Cache
 D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\krypinBoklistor.dll.config
@@ -8,3 +7,6 @@ D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\krypinBoklistor.
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\obj\Debug\krypinBoklistor.dll
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\obj\Debug\krypinBoklistor.xml
 D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\obj\Debug\krypinBoklistor.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\obj\Debug\krypinBoklistor.vbprojAssemblyReference.cache
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\obj\Debug\krypinBoklistor.vbproj.CoreCompileInputs.cache
+D:\devprojekt\libraries\barnenskrypinBundle\krypinBoklistor\obj\Debug\krypinBoklistor.vbproj.CopyComplete

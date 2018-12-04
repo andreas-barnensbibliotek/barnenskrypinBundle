@@ -88,8 +88,8 @@
     <Compile Include="dal\boktipsAuthorDAL.vb" />
     <Compile Include="dal\boktipsCategoryDAL.vb" />
     <Compile Include="dal\boktipsDateDAL.vb" />
-    <Compile Include="dal\boktipsByUseridDAL.vb" />
     <Compile Include="dal\boktipsGetAllDAL.vb" />
+    <Compile Include="dal\boktipsByUseridDAL.vb" />
     <Compile Include="dal\boktipsRatingDAL.vb" />
     <Compile Include="dal\boktipsTitleDAL.vb" />
     <Compile Include="dal\BookContextDAL.vb" />

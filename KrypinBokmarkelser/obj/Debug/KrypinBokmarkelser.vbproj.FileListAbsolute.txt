@@ -1,10 +1,12 @@
 D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\KrypinBokmarkelser.dll
 D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\KrypinBokmarkelser.pdb
 D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\KrypinBokmarkelser.xml
-D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\obj\Debug\KrypinBokmarkelser.vbprojResolveAssemblyReference.cache
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\obj\Debug\KrypinBokmarkelser.Resources.resources
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\obj\Debug\KrypinBokmarkelser.vbproj.GenerateResource.Cache
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\obj\Debug\KrypinBokmarkelser.dll
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\obj\Debug\KrypinBokmarkelser.xml
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\obj\Debug\KrypinBokmarkelser.pdb
 D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\KrypinBokmarkelser.dll.config
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\obj\Debug\KrypinBokmarkelser.vbproj.CoreCompileInputs.cache
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\obj\Debug\KrypinBokmarkelser.vbproj.CopyComplete
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\obj\Debug\KrypinBokmarkelser.vbprojAssemblyReference.cache

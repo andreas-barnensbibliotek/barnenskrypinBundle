@@ -21,7 +21,7 @@
 
                 If retobj = True Then
 
-                    retobj = _dal.CreateNewKrypinSettings(userid, 2, "2") ' skintyp
+                    retobj = _dal.CreateNewKrypinSettings(userid, 2, "9") ' skintyp
 
                     If retobj = True Then
 

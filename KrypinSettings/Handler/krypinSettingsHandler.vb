@@ -1,4 +1,6 @@
-﻿Public Class krypinSettingsHandler
+﻿Imports barnensbibliotekLibrary35
+
+Public Class krypinSettingsHandler
     Private _dalobj As New SettingsDAL
     Public Function getusersettings2(cmdtyp As CmdSettingsInfo) As ListUserSettingsInfo
         Dim retobj As New ListUserSettingsInfo
@@ -29,7 +31,21 @@
         Return retobj
 
     End Function
+    Public Function getuserlasernu(cmdtyp As CmdSettingsInfo) As ListUserSettingsInfo
+        Dim retobj As New ListUserSettingsInfo
 
+        Try
+            retobj = _dalobj.getLaserjustnu(cmdtyp.Userid)
+            retobj.LaserJustNuSrc = getlaserjustnubyBookid(retobj.LaserJustNu)
+            retobj.Status = "Användarens settings hämtades"
+
+        Catch ex As Exception
+            retobj.Status = "Error användarens settings hämtades inte!"
+        End Try
+
+        Return retobj
+
+    End Function
     Public Function setusersettings(cmdtyp As CmdSettingsInfo) As ListUserSettingsInfo
         Dim retobj As New ListUserSettingsInfo
         Dim tmpstatus As String = "Error " & cmdtyp.SettingCmdtyp & " " & cmdtyp.SettingsIdValue & " uppdaterades inte!"
@@ -79,6 +95,14 @@
         Next
 
         Return "antalkrypin: " & antalet & " klara: " & rakna.ToString & " fel: " & failed.ToString
+
+    End Function
+    Private Function getlaserjustnubyBookid(bookid As Integer) As String
+        Dim imgobj As New BarnensBiblioteksLibraryController
+        Dim bookitem As New APIBarnensbibliotekDAL.BookDetailInfo
+
+        bookitem = imgobj.BookDetailData(bookid)
+        Return bookitem.ImgSrc
 
     End Function
 End Class

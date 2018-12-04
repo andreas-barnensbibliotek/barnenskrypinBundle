@@ -46,6 +46,18 @@ Imports krypinBoktips
         Dim ret As krypinBoktipsInfo = status
 
     End Sub
+
+    <TestMethod()> Public Sub booktipLatestByUserIdTEST()
+        Dim status As New krypinBoktipsInfo
+
+        Dim obj As New krypinBoktipsMainController
+
+        status = obj.booktipLatestByUserId(7017)
+
+
+        Dim ret As krypinBoktipsInfo = status
+
+    End Sub
     <TestMethod()> Public Sub addBookTipsTEST()
         Dim status As New krypinBoktipsInfo
         Dim obj As New krypinBoktipsMainCRUDController

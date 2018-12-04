@@ -5,9 +5,12 @@ D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\bin\Release\krypin
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\bin\Release\krypinBoktips.pdb
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\bin\Release\krypinBoktips.xml
-D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\obj\Release\KrypinBoktipsTEST.vbprojResolveAssemblyReference.cache
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\obj\Release\KrypinBoktipsTEST.Resources.resources
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\obj\Release\KrypinBoktipsTEST.vbproj.GenerateResource.Cache
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\obj\Release\KrypinBoktipsTEST.dll
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\obj\Release\KrypinBoktipsTEST.xml
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\obj\Release\KrypinBoktipsTEST.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\bin\Release\krypinBoktips.dll.config
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\obj\Release\KrypinBoktipsTEST.vbprojAssemblyReference.cache
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\obj\Release\KrypinBoktipsTEST.vbproj.CoreCompileInputs.cache
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinBoktipsTEST\obj\Release\KrypinBoktipsTEST.vbproj.CopyComplete

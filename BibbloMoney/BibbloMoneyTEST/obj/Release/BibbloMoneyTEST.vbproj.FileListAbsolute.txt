@@ -2,7 +2,6 @@ D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\bin\Rele
 D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\bin\Release\BibbloMoneyTEST.pdb
 D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\bin\Release\BibbloMoneyTEST.xml
 D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\obj\Release\BibbloMoneyTEST.vbprojResolveAssemblyReference.cache
 D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\obj\Release\BibbloMoneyTEST.Resources.resources
 D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\obj\Release\BibbloMoneyTEST.vbproj.GenerateResource.Cache
 D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\obj\Release\BibbloMoneyTEST.dll
@@ -11,3 +10,7 @@ D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\obj\Rele
 D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\bin\Release\BibbloMoney.dll
 D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\bin\Release\BibbloMoney.pdb
 D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\bin\Release\BibbloMoney.xml
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\bin\Release\BibbloMoney.dll.config
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\obj\Release\BibbloMoneyTEST.vbprojAssemblyReference.cache
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\obj\Release\BibbloMoneyTEST.vbproj.CoreCompileInputs.cache
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\BibbloMoneyTEST\obj\Release\BibbloMoneyTEST.vbproj.CopyComplete

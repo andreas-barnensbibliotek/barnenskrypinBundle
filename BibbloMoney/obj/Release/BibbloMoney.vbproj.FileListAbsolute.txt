@@ -2,9 +2,10 @@ D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\bin\Release\BibbloMoney.
 D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\bin\Release\BibbloMoney.dll
 D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\bin\Release\BibbloMoney.pdb
 D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\bin\Release\BibbloMoney.xml
-D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\obj\Release\BibbloMoney.vbprojResolveAssemblyReference.cache
 D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\obj\Release\BibbloMoney.Resources.resources
 D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\obj\Release\BibbloMoney.vbproj.GenerateResource.Cache
 D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\obj\Release\BibbloMoney.dll
 D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\obj\Release\BibbloMoney.xml
 D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\obj\Release\BibbloMoney.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\obj\Release\BibbloMoney.vbprojAssemblyReference.cache
+D:\devprojekt\libraries\barnenskrypinBundle\BibbloMoney\obj\Release\BibbloMoney.vbproj.CoreCompileInputs.cache

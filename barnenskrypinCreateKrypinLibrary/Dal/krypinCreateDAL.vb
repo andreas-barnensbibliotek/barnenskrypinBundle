@@ -1,4 +1,4 @@
-﻿Imports ajBarnensKrypin_v2.Linq
+﻿
 
 Public Class krypinCreateDAL
 

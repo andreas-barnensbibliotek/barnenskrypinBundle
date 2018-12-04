@@ -11,3 +11,4 @@ D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\KrypinSettings.d
 D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\KrypinSettings.dll
 D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\KrypinSettings.pdb
 D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\KrypinSettings.xml
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\obj\Debug\KrypinSettings.vbproj.CoreCompileInputs.cache

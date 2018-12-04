@@ -22,7 +22,7 @@ Imports System.Linq.Expressions
 Imports System.Reflection
 
 
-<Global.System.Data.Linq.Mapping.DatabaseAttribute(Name:="Database")>  _
+<Global.System.Data.Linq.Mapping.DatabaseAttribute(Name:="AJDNNDatabase_v5")>  _
 Partial Public Class krypinBooklistLinqDataContext
 	Inherits System.Data.Linq.DataContext
 	
@@ -49,10 +49,16 @@ Partial Public Class krypinBooklistLinqDataContext
     End Sub
   Partial Private Sub DeletetblAJBookList(instance As tblAJBookList)
     End Sub
+  Partial Private Sub InserttblAjKrypinUserSetting(instance As tblAjKrypinUserSetting)
+    End Sub
+  Partial Private Sub UpdatetblAjKrypinUserSetting(instance As tblAjKrypinUserSetting)
+    End Sub
+  Partial Private Sub DeletetblAjKrypinUserSetting(instance As tblAjKrypinUserSetting)
+    End Sub
   #End Region
 	
 	Public Sub New()
-		MyBase.New(Global.krypinBoklistor.My.MySettings.Default.DatabaseConnectionString, mappingSource)
+		MyBase.New(Global.krypinBoklistor.My.MySettings.Default.AJDNNDatabase_v5ConnectionString, mappingSource)
 		OnCreated
 	End Sub
 	
@@ -91,6 +97,12 @@ Partial Public Class krypinBooklistLinqDataContext
 	Public ReadOnly Property tblAJBookLists() As System.Data.Linq.Table(Of tblAJBookList)
 		Get
 			Return Me.GetTable(Of tblAJBookList)
+		End Get
+	End Property
+	
+	Public ReadOnly Property tblAjKrypinUserSettings() As System.Data.Linq.Table(Of tblAjKrypinUserSetting)
+		Get
+			Return Me.GetTable(Of tblAjKrypinUserSetting)
 		End Get
 	End Property
 	
@@ -477,6 +489,134 @@ Partial Public Class tblAJBookList
 				Me._gruppid = value
 				Me.SendPropertyChanged("gruppid")
 				Me.OngruppidChanged
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tblAjKrypinUserSettings")>  _
+Partial Public Class tblAjKrypinUserSetting
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _settingID As Integer
+	
+	Private _userid As System.Nullable(Of Integer)
+	
+	Private _settingTypID As System.Nullable(Of Integer)
+	
+	Private _settingValue As String
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnsettingIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnsettingIDChanged()
+    End Sub
+    Partial Private Sub OnuseridChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnuseridChanged()
+    End Sub
+    Partial Private Sub OnsettingTypIDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnsettingTypIDChanged()
+    End Sub
+    Partial Private Sub OnsettingValueChanging(value As String)
+    End Sub
+    Partial Private Sub OnsettingValueChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_settingID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property settingID() As Integer
+		Get
+			Return Me._settingID
+		End Get
+		Set
+			If ((Me._settingID = value)  _
+						= false) Then
+				Me.OnsettingIDChanging(value)
+				Me.SendPropertyChanging
+				Me._settingID = value
+				Me.SendPropertyChanged("settingID")
+				Me.OnsettingIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_userid", DbType:="Int")>  _
+	Public Property userid() As System.Nullable(Of Integer)
+		Get
+			Return Me._userid
+		End Get
+		Set
+			If (Me._userid.Equals(value) = false) Then
+				Me.OnuseridChanging(value)
+				Me.SendPropertyChanging
+				Me._userid = value
+				Me.SendPropertyChanged("userid")
+				Me.OnuseridChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_settingTypID", DbType:="Int")>  _
+	Public Property settingTypID() As System.Nullable(Of Integer)
+		Get
+			Return Me._settingTypID
+		End Get
+		Set
+			If (Me._settingTypID.Equals(value) = false) Then
+				Me.OnsettingTypIDChanging(value)
+				Me.SendPropertyChanging
+				Me._settingTypID = value
+				Me.SendPropertyChanged("settingTypID")
+				Me.OnsettingTypIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_settingValue", DbType:="NVarChar(250)")>  _
+	Public Property settingValue() As String
+		Get
+			Return Me._settingValue
+		End Get
+		Set
+			If (String.Equals(Me._settingValue, value) = false) Then
+				Me.OnsettingValueChanging(value)
+				Me.SendPropertyChanging
+				Me._settingValue = value
+				Me.SendPropertyChanged("settingValue")
+				Me.OnsettingValueChanged
 			End If
 		End Set
 	End Property

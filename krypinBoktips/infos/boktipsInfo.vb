@@ -27,15 +27,15 @@ Public Class boktipsInfo
         _Title = ""
         _Bookid = 0
         _Author = ""
-        _HighAge = 0
-        _LowAge = 0
+        _HighAge = 1
+        _LowAge = 1
         _Review = ""
         _UserName = ""
         _Userid = 0
-        _Userage = 0
+        _Userage = 1
         _tiptype = 0
         _Approved = 0
-        _Category = ""
+        _Category = "0"
         _Inserted = Date.Now.ToShortDateString
 
     End Sub

@@ -14,5 +14,11 @@
         <elementListCompartment Id="c6f6d847-3842-4e91-908e-2b5afc030a03" absoluteBounds="4.515, 1.21, 1.9700000000000002, 6.0184326171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="fb44cd81-655f-445f-8ef6-d4feebe1a601" absoluteBounds="6.875, 0.875, 2, 4.2708154296875">
+      <DataClassMoniker Name="/LinqDataModelDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d8aaeaf-c479-4529-89ec-982087cb8871" absoluteBounds="6.89, 1.335, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

@@ -74,6 +74,45 @@
 
     End Function
 
+    Public Function getskrivbokenAdmin(approved As Integer) As IList(Of skrivItemInfo)
+        Dim tmpobj As New List(Of skrivItemInfo)
+        Dim arr = From p In _linqObj.AJ_BB_Krypin_skrivbok_byAdmin(1, approved - 1)
+                  Select p
+
+        For Each t In arr
+            tmpobj.Add(fyllskrivobj(t))
+        Next
+
+        If tmpobj.Count <= 0 Then
+            Dim noresult As New skrivItemInfo
+            noresult.Title = "Finns inget att visa"
+            tmpobj.Add(noresult)
+        End If
+
+        Return tmpobj
+
+    End Function
+
+    Public Function getskrivbokenAdminALLA() As IList(Of skrivItemInfo)
+
+        Dim tmpobj As New List(Of skrivItemInfo)
+        Dim arr = From p In _linqObj.AJ_BB_Krypin_skrivbok_byAdmin(2, 1)
+                  Select p
+
+        For Each t In arr
+            tmpobj.Add(fyllskrivobj(t))
+        Next
+
+        If tmpobj.Count <= 0 Then
+            Dim noresult As New skrivItemInfo
+            noresult.Title = "Finns inget att visa"
+            tmpobj.Add(noresult)
+        End If
+
+        Return tmpobj
+
+    End Function
+
 #Region "usersecurity"
 
     Public Function checkUserAdminRoll(incuserid As Integer) As Boolean
@@ -97,20 +136,26 @@
     Public Function checkIFuserIsSecure(val As Integer, cmdtyp As commandTypeInfo) As Boolean
         Dim ret As Boolean = False
         Dim arr As New Object
+        Dim arruserid As Integer = 0
         Dim tmpobj As New List(Of skrivItemInfo)
         Select Case val
             Case 1
                 arr = (From p In _linqObj.AJ_BB_Krypin_skrivbok_byUserid(cmdtyp.GetPublishTyp, cmdtyp.Userid, cmdtyp.Approved, cmdtyp.Publish)
                        Select p).First
+                arruserid = arr.Userid
             Case 2
                 arr = (From p In _linqObj.AJ_BB_Krypin_skrivbok_byCategory(cmdtyp.Category, cmdtyp.Approved, cmdtyp.Publish)
                        Select p).First
+                arruserid = arr.Userid
             Case 3
                 arr = (From p In _linqObj.AJ_BB_Krypin_skrivbok_bySkrivID(cmdtyp.Skrivid)
                        Select p).First
+                arruserid = arr.Userid
+            Case Else
+                arruserid = 0
         End Select
 
-        If arr.Userid = cmdtyp.Userid Then
+        If arruserid = cmdtyp.Userid Then
             ret = True
         End If
 

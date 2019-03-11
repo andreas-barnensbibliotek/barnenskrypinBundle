@@ -58,7 +58,7 @@ Partial Public Class skrivbokenLinqDataContext
   #End Region
 	
 	Public Sub New()
-		MyBase.New(Global.krypinSkrivboken.My.MySettings.Default.AJDNNDatabase_v5ConnectionString1, mappingSource)
+		MyBase.New(Global.krypinSkrivboken.My.MySettings.Default.AJDNNDatabase_v5ConnectionString2, mappingSource)
 		OnCreated
 	End Sub
 	
@@ -128,6 +128,12 @@ Partial Public Class skrivbokenLinqDataContext
 	Public Function AJ_BB_Krypin_skrivbok_bySkrivID(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal skrivID As System.Nullable(Of Integer)) As ISingleResult(Of AJ_BB_Krypin_skrivbok_bySkrivIDResult)
 		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), skrivID)
 		Return CType(result.ReturnValue,ISingleResult(Of AJ_BB_Krypin_skrivbok_bySkrivIDResult))
+	End Function
+	
+	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.AJ_BB_Krypin_skrivbok_byAdmin")>  _
+	Public Function AJ_BB_Krypin_skrivbok_byAdmin(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal typ As System.Nullable(Of Integer), <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal approved As System.Nullable(Of Integer)) As ISingleResult(Of AJ_BB_Krypin_skrivbok_byAdminResult)
+		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), typ, approved)
+		Return CType(result.ReturnValue,ISingleResult(Of AJ_BB_Krypin_skrivbok_byAdminResult))
 	End Function
 End Class
 
@@ -1284,6 +1290,156 @@ Partial Public Class AJ_BB_Krypin_skrivbok_byCategoryResult
 End Class
 
 Partial Public Class AJ_BB_Krypin_skrivbok_bySkrivIDResult
+	
+	Private _SkrivID As Integer
+	
+	Private _Userid As Integer
+	
+	Private _username As String
+	
+	Private _Inserted As Date
+	
+	Private _Title As String
+	
+	Private _Story As String
+	
+	Private _Category As System.Nullable(Of Integer)
+	
+	Private _Approved As System.Nullable(Of Integer)
+	
+	Private _Gillar As System.Nullable(Of Integer)
+	
+	Private _publish As System.Nullable(Of Integer)
+	
+	Public Sub New()
+		MyBase.New
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SkrivID", DbType:="Int NOT NULL")>  _
+	Public Property SkrivID() As Integer
+		Get
+			Return Me._SkrivID
+		End Get
+		Set
+			If ((Me._SkrivID = value)  _
+						= false) Then
+				Me._SkrivID = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Userid", DbType:="Int NOT NULL")>  _
+	Public Property Userid() As Integer
+		Get
+			Return Me._Userid
+		End Get
+		Set
+			If ((Me._Userid = value)  _
+						= false) Then
+				Me._Userid = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_username", DbType:="NVarChar(128)")>  _
+	Public Property username() As String
+		Get
+			Return Me._username
+		End Get
+		Set
+			If (String.Equals(Me._username, value) = false) Then
+				Me._username = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Inserted", DbType:="Date NOT NULL")>  _
+	Public Property Inserted() As Date
+		Get
+			Return Me._Inserted
+		End Get
+		Set
+			If ((Me._Inserted = value)  _
+						= false) Then
+				Me._Inserted = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Title", DbType:="NVarChar(50)")>  _
+	Public Property Title() As String
+		Get
+			Return Me._Title
+		End Get
+		Set
+			If (String.Equals(Me._Title, value) = false) Then
+				Me._Title = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Story", DbType:="VarChar(MAX)")>  _
+	Public Property Story() As String
+		Get
+			Return Me._Story
+		End Get
+		Set
+			If (String.Equals(Me._Story, value) = false) Then
+				Me._Story = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Category", DbType:="Int")>  _
+	Public Property Category() As System.Nullable(Of Integer)
+		Get
+			Return Me._Category
+		End Get
+		Set
+			If (Me._Category.Equals(value) = false) Then
+				Me._Category = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Approved", DbType:="Int")>  _
+	Public Property Approved() As System.Nullable(Of Integer)
+		Get
+			Return Me._Approved
+		End Get
+		Set
+			If (Me._Approved.Equals(value) = false) Then
+				Me._Approved = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Gillar", DbType:="Int")>  _
+	Public Property Gillar() As System.Nullable(Of Integer)
+		Get
+			Return Me._Gillar
+		End Get
+		Set
+			If (Me._Gillar.Equals(value) = false) Then
+				Me._Gillar = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_publish", DbType:="Int")>  _
+	Public Property publish() As System.Nullable(Of Integer)
+		Get
+			Return Me._publish
+		End Get
+		Set
+			If (Me._publish.Equals(value) = false) Then
+				Me._publish = value
+			End If
+		End Set
+	End Property
+End Class
+
+Partial Public Class AJ_BB_Krypin_skrivbok_byAdminResult
 	
 	Private _SkrivID As Integer
 	

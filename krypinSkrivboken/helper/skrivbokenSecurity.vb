@@ -30,6 +30,7 @@
                         ret = True
                     End If
                 End If
+
             Catch ex As Exception
 
             End Try
@@ -42,6 +43,10 @@
         Dim ret As Boolean = False
         If _dalobj.checkUserAdminRoll(userid) Then
             ret = True
+        Else
+            If userid = 1 Then 'host... kolla upp säkrare sätt!!!!
+                ret = True
+            End If
         End If
         Return ret
     End Function

@@ -7,6 +7,7 @@ Public Class krypinSkrivbokenMainController
         byuserid = 1
         bycategory = 2
         byskrivid = 3
+        byadmin = 4
     End Enum
 
     Public Function getSkrivbokByUserid(cmdtyp As commandTypeInfo) As skrivbokenJsonContainerInfo
@@ -47,6 +48,30 @@ Public Class krypinSkrivbokenMainController
 
         Return retobj
     End Function
+
+    Public Function getSkrivbokByAdmin(cmdtyp As commandTypeInfo) As skrivbokenJsonContainerInfo
+
+        Dim retobj As New skrivbokenJsonContainerInfo
+        If _safeobj.safeuser(valdtyp.byadmin, cmdtyp) And cmdtyp.Approved > 0 Then
+            Try
+                If cmdtyp.Approved > 2 Then
+                    retobj.SkrivbokenList = _dalobj.getskrivbokenAdminALLA()
+                Else
+                    retobj.SkrivbokenList = _dalobj.getskrivbokenAdmin(cmdtyp.Approved)
+                End If
+                retobj.SkrivbokenListCount = retobj.SkrivbokenList.Count
+                retobj.SkrivItemCount = retobj.SkrivbokenListCount
+                retobj.Status = "Users item by Admin is collected!"
+            Catch ex As Exception
+                retobj.Status = "ERR Failed to get item by Admin!"
+            End Try
+        Else
+            retobj.Status = "User not authorized!"
+        End If
+
+        Return retobj
+    End Function
+
 
     Public Function getSkrivbokBySkrivid(cmdtyp As commandTypeInfo) As skrivbokenJsonContainerInfo
 

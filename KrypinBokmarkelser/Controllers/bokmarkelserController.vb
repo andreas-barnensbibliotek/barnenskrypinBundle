@@ -40,14 +40,23 @@ Public Class bokmarkelserController
     End Function
     Public Function getUserValdAward(userid As Integer, awardgroup As Integer) As List(Of bokmarkelserAwardsInfo)
         Dim itmobj As New List(Of bokmarkelserAwardsInfo)
+        Dim lvup As Integer = 0
 
-        For Each itm In _dalobj.getvaldUserAwards(userid, awardgroup)
+        For Each itm In _dalobj.getvaldUserAwards(3, userid, awardgroup)
+
+
             If itm.UserLevel >= itm.Occures Then
 
                 itmobj.Add(itm)
             Else
+                If itm.UserLevel > 0 Then
+                    lvup = itm.UserLevel * itm.Tolevelup
+                Else
+                    lvup = itm.Tolevelup
+                End If
 
-                If itm.Counter >= (itm.UserLevel * 10) Then
+
+                If itm.Counter >= lvup Then
                     Dim nylevel As Integer = itm.UserLevel + 1
 
                     'ADD award to BIBBLOMONEY LIBRARY earn bibblomoney if levelup
@@ -61,9 +70,9 @@ Public Class bokmarkelserController
                 Else
                     itmobj.Add(itm)
 
-                End If
+                    End If
 
-            End If
+                End If
 
         Next
 
@@ -89,8 +98,10 @@ Public Class bokmarkelserController
             'kolla om user har award sedan tidigare
             If CheckuserAward(userid, awardgroup) Then
                 ' om user har denna award sedan tidigare adda 1 till counter
-                ' TODO lägg till PointsEarned från tblAjBokmarkelseGrupper och räkna ut ny level
                 appendPointToUserAward(userid, awardgroup, 1)
+
+                'lägg till PointsEarned från tblAjBokmarkelseGrupper och räkna ut ny level
+                getUserValdAward(userid, awardgroup)
 
             Else
                 ' om inte har denna lägg till 

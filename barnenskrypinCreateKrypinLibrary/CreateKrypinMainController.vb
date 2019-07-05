@@ -25,7 +25,7 @@
 
                     If retobj = True Then
 
-                        retobj = _dal.CreateNewKrypinSettings(userid, 3, "1") ' läser just nu
+                        retobj = _dal.CreateNewKrypinSettings(userid, 3, "0") ' läser just nu
 
                     End If
                 End If

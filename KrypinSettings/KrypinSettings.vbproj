@@ -43,9 +43,8 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="barnensbibliotekLibrary35, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\barnensbibliotekLibrary35.dll</HintPath>
+    <Reference Include="barnensbibliotekLibrary35">
+      <HintPath>..\..\barnensbibliotekLibrary35\barnensbibliotekLibrary35\bin\Release\barnensbibliotekLibrary35.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="KrypinSettings, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AJDNNDatabase_v5" Class="QuestLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=AJDNNDatabase_v5;User ID=forfAdmin4" SettingsObjectName="QuestLibrary.My.MySettings" SettingsPropertyName="AJDNNDatabase_v5ConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblAjBokmarkelser" Member="tblAjBokmarkelsers">
+    <Type Name="tblAjBokmarkelser">
+      <Column Name="Aid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Awardname" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Levels" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Beskrivning" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Occurs" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Badgesrc" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Awardgroup" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_aj_QuestUser" Member="tbl_aj_QuestUsers">
+    <Type Name="tbl_aj_QuestUser">
+      <Column Name="UQuestID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Questid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Completed" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="datum" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tid" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_aj_QuestUserToTrigger" Member="tbl_aj_QuestUserToTriggers">
+    <Type Name="tbl_aj_QuestUserToTrigger">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserQuestID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QTriggerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Completed" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_aj_QuestTrigger" Member="tbl_aj_QuestTriggers">
+    <Type Name="tbl_aj_QuestTrigger">
+      <Column Name="QtriggerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TValue" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_aj_Quest" Member="tbl_aj_Quests">
+    <Type Name="tbl_aj_Quest">
+      <Column Name="QuestId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Aid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Uppdrag" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Beskrivning" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.aj_quest_isUserSubQuestCompleted" Method="aj_quest_isUserSubQuestCompleted">
+    <Parameter Name="userid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="questid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="triggerid" Type="System.Int32" DbType="Int" />
+    <ElementType Name="aj_quest_isUserSubQuestCompletedResult">
+      <Column Name="Completed" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

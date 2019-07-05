@@ -6,15 +6,12 @@ D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelse
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Release\BibbloMoney.dll
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Release\KrypinBokmarkelser.pdb
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Release\KrypinBokmarkelser.xml
-D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Release\BibbloMoney.pdb
-D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Release\BibbloMoney.xml
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\obj\Release\KrypinBokmarkelserTEST.Resources.resources
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\obj\Release\KrypinBokmarkelserTEST.vbproj.GenerateResource.Cache
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\obj\Release\KrypinBokmarkelserTEST.dll
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\obj\Release\KrypinBokmarkelserTEST.xml
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\obj\Release\KrypinBokmarkelserTEST.pdb
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Release\KrypinBokmarkelser.dll.config
-D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Release\BibbloMoney.dll.config
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\obj\Release\KrypinBokmarkelserTEST.vbprojAssemblyReference.cache
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\obj\Release\KrypinBokmarkelserTEST.vbproj.CoreCompileInputs.cache
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\obj\Release\KrypinBokmarkelserTEST.vbproj.CopyComplete

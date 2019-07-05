@@ -52,7 +52,7 @@ Partial Public Class bokmarkelserLinqDataContext
   #End Region
 	
 	Public Sub New()
-		MyBase.New(Global.KrypinBokmarkelser.My.MySettings.Default.AJDNNDatabase_v5ConnectionString1, mappingSource)
+		MyBase.New(Global.KrypinBokmarkelser.My.MySettings.Default.AJDNNDatabase_v5ConnectionString2, mappingSource)
 		OnCreated
 	End Sub
 	
@@ -743,6 +743,8 @@ Partial Public Class ajbokmarkelserResult
 	
 	Private _BibblimoneyEarnID As System.Nullable(Of Integer)
 	
+	Private _tolevelup As System.Nullable(Of Integer)
+	
 	Public Sub New()
 		MyBase.New
 	End Sub
@@ -868,6 +870,18 @@ Partial Public Class ajbokmarkelserResult
 		Set
 			If (Me._BibblimoneyEarnID.Equals(value) = false) Then
 				Me._BibblimoneyEarnID = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_tolevelup", DbType:="Int")>  _
+	Public Property tolevelup() As System.Nullable(Of Integer)
+		Get
+			Return Me._tolevelup
+		End Get
+		Set
+			If (Me._tolevelup.Equals(value) = false) Then
+				Me._tolevelup = value
 			End If
 		End Set
 	End Property

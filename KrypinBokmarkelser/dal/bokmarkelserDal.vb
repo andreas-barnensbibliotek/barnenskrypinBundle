@@ -81,6 +81,7 @@
             tmp.Occures = t.Occurs
             tmp.AwardGroup = t.Awardgroup
             tmp.EarnFuncID = t.BibblimoneyEarnID
+            tmp.Tolevelup = t.tolevelup
 
             retobj.Add(tmp)
         Next
@@ -89,11 +90,11 @@
 
     End Function
 
-    Public Function getvaldUserAwards(usrid As Integer, awardid As Integer) As List(Of bokmarkelserAwardsInfo)
+    Public Function getvaldUserAwards(typ As Integer, usrid As Integer, awardid As Integer) As List(Of bokmarkelserAwardsInfo)
 
         Dim retobj As New List(Of bokmarkelserAwardsInfo)
 
-        Dim bl = From t In _linqobj.ajbokmarkelser(2, usrid, awardid)
+        Dim bl = From t In _linqObj.ajbokmarkelser(typ, usrid, awardid)
 
         For Each t In bl
             Dim tmp As New bokmarkelserAwardsInfo
@@ -107,6 +108,7 @@
             tmp.Occures = t.Occurs
             tmp.AwardGroup = t.Awardgroup
             tmp.EarnFuncID = t.BibblimoneyEarnID
+            tmp.Tolevelup = t.tolevelup
 
             retobj.Add(tmp)
         Next

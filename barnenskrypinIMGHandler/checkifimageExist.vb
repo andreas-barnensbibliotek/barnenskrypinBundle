@@ -1,10 +1,10 @@
 ﻿Imports System.Net
 Imports System.IO
 Public Class checkImgExist
-    Private _baseuri As String = "http://www.barnensbibliotek.se/Portals/0/bokomslag/"
+    Private _baseuri As String = "https://www.barnensbibliotek.se/Portals/0/bokomslag/"
     Private _externbaseuri As String = "http://image.bokus.com/images/"
-    Private _filesystemURI As String = "d:\wwwroot\dotnetnuke_v5\Portals\0\Bokomslag\"
-    'Private _filesystemURI As String = "D:\websites\barnensbibliotek.se\www.barnensbibliotek.se\Portals\0\Bokomslag\"
+    'Private _filesystemURI As String = "d:\wwwroot\dotnetnuke_v5\Portals\0\Bokomslag\"
+    Private _filesystemURI As String = "D:\websites\barnensbibliotek.se\www.barnensbibliotek.se\Portals\0\Bokomslag\"
 
     Public Function getimgurlbyIsbn(isbn As String) As String
         If Not String.IsNullOrEmpty(isbn) Then

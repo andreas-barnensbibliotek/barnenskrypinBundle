@@ -7,3 +7,4 @@ D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinIMGHandler\obj\Debug\ba
 D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinIMGHandler\obj\Debug\barnenskrypinIMGHandler.xml
 D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinIMGHandler\obj\Debug\barnenskrypinIMGHandler.pdb
 D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinIMGHandler\obj\Debug\barnenskrypinIMGHandler.vbproj.CoreCompileInputs.cache
+D:\devprojekt\libraries\barnenskrypinBundle\barnenskrypinIMGHandler\obj\Debug\barnenskrypinIMGHandler.vbprojAssemblyReference.cache

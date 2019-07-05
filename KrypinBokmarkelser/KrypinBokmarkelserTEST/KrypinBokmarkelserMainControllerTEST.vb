@@ -5,10 +5,10 @@ Imports KrypinBokmarkelser
     'Användning
     ' setuseraward används för att ge användaren poäng och bibblomoney om användaren får ett bokmärke. värden userid och bokmarkelse id
     'som visar vilket märke som skall tilldelas.
-    <TestMethod()> Public Sub TestMethod1()
+    <TestMethod()> Public Sub SETUSERREWARD()
         Dim testobj As New KrypinBokmarkelserMainController
 
-        Dim ret As bokmarkelserReturnInfo = testobj.setuseraward(7017, 1)
+        Dim ret As bokmarkelserReturnInfo = testobj.setuseraward(7017, 54)
 
         Dim visa As bokmarkelserReturnInfo = ret
 

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QuestLinq">
+  <DataContextMoniker Name="/QuestLinqDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9810e075-20e7-4dc8-872e-0a69a4e7fbe5" absoluteBounds="0.75, 4.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/QuestLinqDataContext/tblAjBokmarkelser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c43ae13a-afba-4bee-8d47-a14d2692734a" absoluteBounds="0.76499999999999968, 5.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c11b3d15-54f7-40f1-8cbb-f5fab29a56da" absoluteBounds="3.75, 2.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/QuestLinqDataContext/tbl_aj_QuestUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ca448443-3a40-46bb-8d62-b3b61525a85f" absoluteBounds="3.7649999999999997, 3.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6e9929f7-acf2-41b3-ab6b-2e7eafb6c237" absoluteBounds="3.75, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/QuestLinqDataContext/tbl_aj_QuestUserToTrigger" />
+      <nestedChildShapes>
+        <elementListCompartment Id="597429db-8e10-493c-909f-ef5808ac2074" absoluteBounds="3.7649999999999997, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c71dff40-0bfb-4ca1-973b-8a190aec6b31" absoluteBounds="0.75, 2.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/QuestLinqDataContext/tbl_aj_QuestTrigger" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f3a06c41-34f8-4bef-b51c-b1de49248be1" absoluteBounds="0.76500000000000012, 3.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f06b53e4-256a-48b1-bbac-60f08944c4b8" absoluteBounds="0.75, 0.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/QuestLinqDataContext/tbl_aj_Quest" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b16f46e4-77c9-4c04-908a-5e2a3efb3118" absoluteBounds="0.76499999999999968, 1.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

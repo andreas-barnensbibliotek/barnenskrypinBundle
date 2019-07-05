@@ -7,7 +7,7 @@ Public Class NyttKrypinDefaultValuesInfo
         _avatar = "defautlavatar_gubbeGlad2.gif"
         _bbmess = ""
         _behorighet = 2
-        _laserjustnu = 1
+        _laserjustnu = 0
         _css = 2
 
     End Sub

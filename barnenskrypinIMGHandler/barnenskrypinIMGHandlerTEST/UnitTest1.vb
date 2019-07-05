@@ -7,7 +7,7 @@ Imports barnenskrypinIMGHandler
     <TestMethod()> Public Sub TestMethod1()
 
         Dim obj As New checkImgExist
-        Dim url As String = obj.getimgurlbyIsbn("915021554x")
+        Dim url As String = obj.getimgurlbyIsbn("91-2966-2885")
 
         Dim retr As String = url
 

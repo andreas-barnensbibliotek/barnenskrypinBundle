@@ -1,4 +1,5 @@
-﻿Imports barnenskrypinIMGHandler
+﻿Imports System.Net
+Imports barnenskrypinIMGHandler
 Public Class krypinBooklistDAL
 
     Private connectionObj As New connectionstringHandler
@@ -23,7 +24,7 @@ Public Class krypinBooklistDAL
         For Each t In bl
             Dim tmpbl As New krypinbooklisInfo
             tmpbl.BlID = t.id
-            tmpbl.Booklistname = t.boklistnamn
+            tmpbl.Booklistname = WebUtility.HtmlDecode(t.boklistnamn)
             tmpbl.Userid = t.Userid
 
 
@@ -43,7 +44,7 @@ Public Class krypinBooklistDAL
         For Each t In Gruppbl
             Dim tmpbl As New krypinbooklisInfo
             tmpbl.BlID = t.id
-            tmpbl.Booklistname = t.boklistnamn
+            tmpbl.Booklistname = WebUtility.HtmlDecode(t.boklistnamn)
             tmpbl.Userid = t.Userid
             If Not String.IsNullOrEmpty(t.gruppid.ToString) Then
                 tmpbl.gruppid = t.gruppid
@@ -67,7 +68,7 @@ Public Class krypinBooklistDAL
         For Each t In bl
             Dim tmpbl As New krypinbooklisInfo
             tmpbl.BlID = t.id
-            tmpbl.Booklistname = t.boklistnamn
+            tmpbl.Booklistname = WebUtility.UrlDecode(t.boklistnamn)
             tmpbl.Userid = t.Userid
             tmpbooklistor.Add(tmpbl)
 
@@ -422,4 +423,6 @@ Public Class krypinBooklistDAL
         Return itm.settingValue
 
     End Function
+
+
 End Class

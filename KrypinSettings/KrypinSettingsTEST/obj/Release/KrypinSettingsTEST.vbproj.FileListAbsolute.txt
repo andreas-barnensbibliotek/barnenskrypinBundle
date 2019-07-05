@@ -14,3 +14,8 @@ D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\bi
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\obj\Release\KrypinSettingsTEST.vbprojAssemblyReference.cache
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\obj\Release\KrypinSettingsTEST.vbproj.CoreCompileInputs.cache
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\obj\Release\KrypinSettingsTEST.vbproj.CopyComplete
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\bin\Release\barnensbibliotekLibrary35.dll
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\bin\Release\DotNetNuke.dll
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\bin\Release\barnensbibliotekLibrary35.pdb
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\bin\Release\barnensbibliotekLibrary35.xml
+D:\devprojekt\libraries\barnenskrypinBundle\KrypinSettings\KrypinSettingsTEST\bin\Release\barnensbibliotekLibrary35.dll.config

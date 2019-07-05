@@ -11,10 +11,7 @@ D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelse
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Debug\KrypinBokmarkelser.pdb
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Debug\KrypinBokmarkelser.xml
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Debug\BibbloMoney.dll
-D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Debug\BibbloMoney.pdb
-D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Debug\BibbloMoney.xml
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Debug\KrypinBokmarkelser.dll.config
-D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\bin\Debug\BibbloMoney.dll.config
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\obj\Debug\KrypinBokmarkelserTEST.vbprojAssemblyReference.cache
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\obj\Debug\KrypinBokmarkelserTEST.vbproj.CoreCompileInputs.cache
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\KrypinBokmarkelserTEST\obj\Debug\KrypinBokmarkelserTEST.vbproj.CopyComplete

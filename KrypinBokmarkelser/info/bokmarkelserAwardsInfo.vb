@@ -102,4 +102,15 @@ Public Class bokmarkelserAwardsInfo
             _earnfuncID = value
         End Set
     End Property
+    Private _tolevelup As Integer
+    Public Property Tolevelup() As Integer
+        Get
+            Return _tolevelup
+        End Get
+        Set(ByVal value As Integer)
+            _tolevelup = value
+        End Set
+    End Property
+
+
 End Class

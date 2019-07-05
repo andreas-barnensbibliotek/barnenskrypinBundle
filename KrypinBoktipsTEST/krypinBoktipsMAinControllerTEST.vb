@@ -117,4 +117,28 @@ Imports krypinBoktips
         Dim ret As String = status.Status
 
     End Sub
+
+    <TestMethod()> Public Sub getBookTipsApproveListTEST()
+        Dim status As New krypinBoktipsInfo
+
+        Dim obj As New krypinBoktipsMainCRUDController
+
+        status = obj.getbooksToApprove()
+
+
+        Dim ret As krypinBoktipsInfo = status
+
+    End Sub
+    <TestMethod()> Public Sub getBookTipsAllTEST()
+        Dim status As New krypinBoktipsInfo
+
+        Dim obj As New krypinBoktipsMainCRUDController
+
+        status = obj.getbooktipAll()
+
+
+        Dim ret As krypinBoktipsInfo = status
+
+    End Sub
+
 End Class

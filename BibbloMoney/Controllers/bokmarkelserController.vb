@@ -67,7 +67,7 @@
                 ' om user har denna award sedan tidigare adda 1 till counter
 
                 appendPointToUserAward(userid, awardgroupid, 1)
-                ' TODO lägg till PointsEarned från tblAjBokmarkelseGrupper och räkna ut ny level
+                ' Lägg till PointsEarned från tblAjBokmarkelseGrupper och räkna ut ny level
                 Dim itm As bokmarkelserAwardsInfo = _dalobj.getvaldUserAwards(userid, awardgroupid)
 
                 If itm.UserLevel < itm.Occures Then

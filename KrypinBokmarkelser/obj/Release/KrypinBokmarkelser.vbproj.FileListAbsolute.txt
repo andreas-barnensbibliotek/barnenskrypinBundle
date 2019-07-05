@@ -3,14 +3,11 @@ D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\bin\Release\Krypi
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\bin\Release\KrypinBokmarkelser.pdb
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\bin\Release\KrypinBokmarkelser.xml
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\bin\Release\BibbloMoney.dll
-D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\bin\Release\BibbloMoney.pdb
-D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\bin\Release\BibbloMoney.xml
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\obj\Release\KrypinBokmarkelser.Resources.resources
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\obj\Release\KrypinBokmarkelser.vbproj.GenerateResource.Cache
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\obj\Release\KrypinBokmarkelser.dll
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\obj\Release\KrypinBokmarkelser.xml
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\obj\Release\KrypinBokmarkelser.pdb
-D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\bin\Release\BibbloMoney.dll.config
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\obj\Release\KrypinBokmarkelser.vbprojAssemblyReference.cache
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\obj\Release\KrypinBokmarkelser.vbproj.CoreCompileInputs.cache
 D:\devprojekt\libraries\barnenskrypinBundle\KrypinBokmarkelser\obj\Release\KrypinBokmarkelser.vbproj.CopyComplete

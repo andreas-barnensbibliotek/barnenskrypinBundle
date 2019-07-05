@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AJDNNDatabase_v5" Class="bokmarkelserLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=AJDNNDatabase_v5;User ID=forfAdmin2" SettingsObjectName="KrypinBokmarkelser.My.MySettings" SettingsPropertyName="AJDNNDatabase_v5ConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=AJDNNDatabase_v5;User ID=forfAdmin4" SettingsObjectName="KrypinBokmarkelser.My.MySettings" SettingsPropertyName="AJDNNDatabase_v5ConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.tblAjBokmarkelseGrupper" Member="tblAjBokmarkelseGruppers">
     <Type Name="tblAjBokmarkelseGrupper">
       <Column Name="AwardGroupID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -56,6 +56,7 @@
       <Column Name="Occurs" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Awardgroup" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="BibblimoneyEarnID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tolevelup" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>
